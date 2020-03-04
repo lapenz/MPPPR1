@@ -87,7 +87,7 @@ public class Book extends Model<Book> implements Serializable{
 		return null;
 	}
 	@Override
-	public List<String> validate(Book obj) {
+	public List<String> validate() {
 		// TODO Auto-generated method stub
 		return null;
 	}

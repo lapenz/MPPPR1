@@ -76,7 +76,7 @@ public class Member extends Model<Member> implements Serializable{
 		this.phone = phone;
 	}
 	@Override
-	public List<String> validate(Member obj) {
+	public List<String> validate() {
 		// TODO Auto-generated method stub
 		return null;
 	}

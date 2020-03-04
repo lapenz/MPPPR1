@@ -51,7 +51,7 @@ public class CopyBook extends Model<CopyBook> {
 	}
 
 	@Override
-	public List<String> validate(CopyBook obj) {
+	public List<String> validate() {
 		// TODO Auto-generated method stub
 		return null;
 	}

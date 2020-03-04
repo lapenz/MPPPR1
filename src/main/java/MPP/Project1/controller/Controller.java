@@ -17,9 +17,29 @@ public abstract class Controller<T> implements IController<T> {
 		return ModelFactory.getModel(this.getClass().getName());
     }
 	
-	public void save(IModel<T> obj) {
-//		obj.save();
-	};
+	@Override
+	public List<String> save(IModel<T> obj) {
+		List<String> errors = obj.validate();
+		if(errors.isEmpty()) {
+			obj.save();
+			return null;
+		} else {
+			return errors;
+		}
+		
+	}
+	
+	@Override
+	public List<String> update(IModel<T> obj) {
+		List<String> errors = obj.validate();
+		if(errors.isEmpty()) {
+			obj.update();
+			return null;
+		} else {
+			return errors;
+		}
+		
+	}
 	
 	public void delete(IModel<T> obj) {
 		obj.delete();

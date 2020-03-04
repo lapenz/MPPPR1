@@ -96,7 +96,7 @@ public class Author extends Model<Author> implements Serializable {
 	}
 	
 	@Override
-	public List<String> validate(Author obj) {
+	public List<String> validate() {
 		// TODO Auto-generated method stub
 		return null;
 	}
