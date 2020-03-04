@@ -6,7 +6,8 @@ import java.util.List;
 import MPP.Project1.model.IModel;
 
 public interface IController<T> {
-	void save(IModel<T> obj);
+	List<String> save(IModel<T> obj);
+	List<String> update(IModel<T> obj);
 	IModel create() throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException;
 	List<T> findAll();
 	T find(int id);

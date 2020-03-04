@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -33,7 +33,7 @@ public class Author extends Model<Author> implements Serializable {
 	private String credentials;
 	private String bio;
 	
-	@ManyToMany( cascade = {CascadeType.ALL})
+	@ManyToMany(fetch=FetchType.LAZY)
 	@JoinTable(name="book_author", 
 	        joinColumns = { @JoinColumn(name = "author_id") }, 
 	        inverseJoinColumns = { @JoinColumn(name = "book_id")})
@@ -96,7 +96,7 @@ public class Author extends Model<Author> implements Serializable {
 	}
 	
 	@Override
-	public List<String> validate(Author obj) {
+	public List<String> validate() {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -106,6 +106,7 @@ public class Author extends Model<Author> implements Serializable {
 	public void setBooks(List<Book> books) {
 		this.books = books;
 	}
+
 
 
 	

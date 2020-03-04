@@ -4,16 +4,15 @@ import java.util.List;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.AnnotationConfiguration;
+
+import MPP.Project1.HibernateUtil;
 
 public abstract class Model<T> implements IModel<T> {
 
 	
 	@Override
 	public void save() {
-		SessionFactory sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
-	    Session session = sessionFactory.openSession();
+	    Session session = HibernateUtil.getSession();
 		session.beginTransaction();
         session.save(this);
         session.getTransaction().commit();
@@ -24,8 +23,7 @@ public abstract class Model<T> implements IModel<T> {
 	
 	@Override
 	public void update() {
-		SessionFactory sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
-	    Session session = sessionFactory.openSession();
+		Session session = HibernateUtil.getSession();
 	    
 		session.beginTransaction();
         session.saveOrUpdate(this);
@@ -36,8 +34,7 @@ public abstract class Model<T> implements IModel<T> {
 	}
 	@Override
 	public void delete() {
-		SessionFactory sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
-	    Session session = sessionFactory.openSession();
+		Session session = HibernateUtil.getSession();
 	    
 		session.beginTransaction();
         session.delete(this);
@@ -48,28 +45,34 @@ public abstract class Model<T> implements IModel<T> {
 	}
 	@Override
 	public T find(int id)  {
-		SessionFactory sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
-	    Session session = sessionFactory.openSession();
+		Session session = HibernateUtil.getSession();
 	    
 		Query q = session.createQuery("FROM "+ this.getClass().getName() + " where id = " + id);
         
         T obj = (T) q.uniqueResult();
         
-        session.close();
+        return obj;
+	}
+	
+	@Override
+	public T findFirst(String column, String value)  {
+		Session session = HibernateUtil.getSession();
+	    
+		Query q = session.createQuery("FROM "+ this.getClass().getName() + " where " + column + " = " + value);
+        
+        T obj = (T) q.uniqueResult();
+        
         
         return obj;
 	}
 	
 	@Override
 	public List<T> findAll() {
-		SessionFactory sessionFactory = new AnnotationConfiguration().configure().buildSessionFactory();
-	    Session session = sessionFactory.openSession();
+		Session session = HibernateUtil.getSession();
 		
 		Query q = session.createQuery("FROM "+ this.getClass().getName());
         
         List<T> objs = q.list();
-        
-        session.close();
         
         return objs;
         

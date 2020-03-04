@@ -44,7 +44,7 @@ public class User extends Model<User> implements Serializable {
 	}
 	
 	@Override
-	public List<String> validate(User obj) {
+	public List<String> validate() {
 		// TODO Auto-generated method stub
 		return null;
 	}

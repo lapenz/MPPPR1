@@ -47,7 +47,7 @@ public class Lend extends Model<Lend> {
 		this.fine = fine;
 	}
 	@Override
-	public List<String> validate(Lend obj) {
+	public List<String> validate() {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -5,15 +5,13 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
-
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.LazyCollectionOption;
 
 @Entity
 public class Book extends Model<Book> implements Serializable{
@@ -27,15 +25,14 @@ public class Book extends Model<Book> implements Serializable{
 	private String title;
 	private String isbn;
 	
-	@ManyToMany( cascade = {CascadeType.ALL})
+	@ManyToMany(fetch=FetchType.LAZY, cascade = {CascadeType.ALL})
 	@JoinTable(name="book_author", 
     joinColumns = { @JoinColumn(name = "book_id") }, 
     inverseJoinColumns = { @JoinColumn(name = "author_id")})
 	private List<Author> authors = new ArrayList<Author>();
 	
-	@OneToMany(cascade = {CascadeType.ALL})
+	@OneToMany(fetch=FetchType.EAGER, cascade = {CascadeType.ALL})
 	@JoinColumn(nullable = false)
-	@LazyCollection(LazyCollectionOption.FALSE)
 	private List<CopyBook> copyBooks = new ArrayList<CopyBook>();	
 	
 	public Book() {
@@ -90,14 +87,13 @@ public class Book extends Model<Book> implements Serializable{
 		return null;
 	}
 	@Override
-	public List<String> validate(Book obj) {
+	public List<String> validate() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 	@Override
 	public String toString() {
-		return "Book [id=" + id + ", title=" + title + ", isbn=" + isbn + ", authors=" + authors + ", copyBooks="
-				+ copyBooks + "]";
+		return "Book [id=" + id + ", title=" + title + ", isbn=" + isbn + "]";
 	}
 	
 }

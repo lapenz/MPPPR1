@@ -18,6 +18,10 @@ public class CopyBook extends Model<CopyBook> {
 	@ManyToOne
     private Book book;
 	
+	public CopyBook() {
+		
+	}
+	
 	public CopyBook(Book book) {
 		this.book = book;
 	}
@@ -47,7 +51,7 @@ public class CopyBook extends Model<CopyBook> {
 	}
 
 	@Override
-	public List<String> validate(CopyBook obj) {
+	public List<String> validate() {
 		// TODO Auto-generated method stub
 		return null;
 	}

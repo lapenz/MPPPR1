@@ -7,6 +7,8 @@ public interface IModel<T> {
 	void update();
 	void delete();
 	List<T> findAll();
-	List<String> validate(T obj);
+	List<String> validate();
 	T find(int id);
+	T findFirst(String column, String value);
+
 }
