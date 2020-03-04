@@ -17,6 +17,10 @@ public class CopyBook extends Model<CopyBook> {
 	
 	@ManyToOne
     private Book book;
+	
+	public CopyBook(Book book) {
+		this.book = book;
+	}
 
 	public int getNumber() {
 		return number;

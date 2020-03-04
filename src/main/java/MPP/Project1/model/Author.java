@@ -8,10 +8,9 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.LazyCollectionOption;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Author extends Model<Author> implements Serializable {
@@ -34,8 +33,10 @@ public class Author extends Model<Author> implements Serializable {
 	private String credentials;
 	private String bio;
 	
-	@OneToMany( cascade = {CascadeType.ALL})
-	@LazyCollection(LazyCollectionOption.FALSE)
+	@ManyToMany( cascade = {CascadeType.ALL})
+	@JoinTable(name="book_author", 
+	        joinColumns = { @JoinColumn(name = "author_id") }, 
+	        inverseJoinColumns = { @JoinColumn(name = "book_id")})
 	private List<Book> books = new ArrayList<Book>();
 	
 	

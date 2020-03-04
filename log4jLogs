@@ -82,3 +82,682 @@
 21:53:05,652  INFO TableMetadata:65 - foreign keys: []
 21:53:05,652  INFO TableMetadata:66 - indexes: [member_pkey]
 21:53:05,652  INFO SchemaUpdate:183 - schema update complete
+10:45:55,180  INFO Version:15 - Hibernate Annotations 3.4.0.GA
+10:45:55,204  INFO Environment:543 - Hibernate 3.3.0.SP1
+10:45:55,210  INFO Environment:576 - hibernate.properties not found
+10:45:55,213  INFO Environment:709 - Bytecode provider name : javassist
+10:45:55,220  INFO Environment:627 - using JDK 1.4 java.sql.Timestamp handling
+10:45:55,278  INFO Version:14 - Hibernate Commons Annotations 3.1.0.GA
+10:45:55,281  INFO Configuration:1460 - configuring from resource: /hibernate.cfg.xml
+10:45:55,282  INFO Configuration:1437 - Configuration resource: /hibernate.cfg.xml
+10:45:55,969  INFO Configuration:1575 - Configured SessionFactory: null
+10:45:55,971  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+10:45:56,006  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Member
+10:45:56,035  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Member on table Member
+10:45:56,065  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Book
+10:45:56,065  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Book on table Book
+10:45:56,094  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.CopyBook
+10:45:56,094  INFO EntityBinder:422 - Bind entity MPP.Project1.model.CopyBook on table CopyBook
+10:45:56,099  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Author
+10:45:56,100  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Author on table Author
+10:45:56,161  INFO CollectionBinder:650 - Mapping collection: MPP.Project1.model.Book.copyBooks -> CopyBook
+10:45:56,162  INFO CollectionBinder:650 - Mapping collection: MPP.Project1.model.Book.authors -> Author
+10:45:56,162  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+10:45:56,169  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+10:45:56,170  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+10:45:56,170  INFO DriverManagerConnectionProvider:68 - autocommit mode: false
+10:45:56,193  INFO DriverManagerConnectionProvider:103 - using driver: org.postgresql.Driver at URL: jdbc:postgresql://localhost:5432/mppproject1
+10:45:56,193  INFO DriverManagerConnectionProvider:109 - connection properties: {password=****, user=postgres}
+10:45:56,319  INFO SettingsFactory:116 - RDBMS: PostgreSQL, version: 12.2
+10:45:56,320  INFO SettingsFactory:117 - JDBC driver: PostgreSQL JDBC Driver, version: 42.2.2.jre7
+10:45:56,334  INFO Dialect:175 - Using dialect: org.hibernate.dialect.PostgreSQLDialect
+10:45:56,338  INFO TransactionFactoryFactory:59 - Using default transaction strategy (direct JDBC transactions)
+10:45:56,340  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+10:45:56,340  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+10:45:56,340  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+10:45:56,340  INFO SettingsFactory:181 - JDBC batch size: 15
+10:45:56,340  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+10:45:56,341  INFO SettingsFactory:189 - Scrollable result sets: enabled
+10:45:56,341  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): enabled
+10:45:56,342  INFO SettingsFactory:205 - Connection release mode: auto
+10:45:56,342  INFO SettingsFactory:232 - Default batch fetch size: 1
+10:45:56,342  INFO SettingsFactory:236 - Generate SQL with comments: disabled
+10:45:56,343  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+10:45:56,343  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+10:45:56,343  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+10:45:56,345  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+10:45:56,345  INFO SettingsFactory:252 - Query language substitutions: {}
+10:45:56,345  INFO SettingsFactory:257 - JPA-QL strict compliance: disabled
+10:45:56,345  INFO SettingsFactory:262 - Second-level cache: enabled
+10:45:56,345  INFO SettingsFactory:266 - Query cache: disabled
+10:45:56,346  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+10:45:56,346  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+10:45:56,346  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+10:45:56,347  INFO SettingsFactory:305 - Echoing all SQL to stdout
+10:45:56,348  INFO SettingsFactory:314 - Statistics: disabled
+10:45:56,348  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+10:45:56,349  INFO SettingsFactory:333 - Default entity-mode: pojo
+10:45:56,349  INFO SettingsFactory:337 - Named query checking : enabled
+10:45:56,557  INFO SessionFactoryImpl:187 - building session factory
+10:45:56,661  INFO PojoInstantiator:84 - no default (no-argument) constructor for class: MPP.Project1.model.Book (class must be instantiated by Interceptor)
+10:45:56,716  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+10:45:56,720  INFO SchemaUpdate:138 - Running hbm2ddl schema update
+10:45:56,720  INFO SchemaUpdate:149 - fetching database metadata
+10:45:56,744  INFO SchemaUpdate:161 - updating schema
+10:45:56,802  INFO TableMetadata:62 - table found: public.author
+10:45:56,802  INFO TableMetadata:63 - columns: [zip, city, credentials, phone, street, bio, last_name, id, state, first_name]
+10:45:56,802  INFO TableMetadata:65 - foreign keys: []
+10:45:56,802  INFO TableMetadata:66 - indexes: [author_pkey]
+10:45:56,812  INFO DatabaseMetadata:119 - table not found: Author_Book
+10:45:56,833  INFO TableMetadata:62 - table found: public.book
+10:45:56,833  INFO TableMetadata:63 - columns: [isbn, id, title]
+10:45:56,833  INFO TableMetadata:65 - foreign keys: []
+10:45:56,833  INFO TableMetadata:66 - indexes: [book_pkey]
+10:45:56,849  INFO TableMetadata:62 - table found: public.copybook
+10:45:56,849  INFO TableMetadata:63 - columns: [number, id, availability, book_id]
+10:45:56,849  INFO TableMetadata:65 - foreign keys: [fke5aa001eb03103d4]
+10:45:56,849  INFO TableMetadata:66 - indexes: [copybook_pkey]
+10:45:56,863  INFO TableMetadata:62 - table found: public.member
+10:45:56,864  INFO TableMetadata:63 - columns: [zip, number, city, phone, street, last_name, id, state, first_name]
+10:45:56,864  INFO TableMetadata:65 - foreign keys: []
+10:45:56,864  INFO TableMetadata:66 - indexes: [member_pkey]
+10:45:56,868  INFO DatabaseMetadata:119 - table not found: Author_Book
+10:45:56,893  INFO SchemaUpdate:183 - schema update complete
+10:45:56,951 TRACE StringType:151 - binding '63636363636363666' to parameter: 1
+10:45:56,952 TRACE StringType:151 - binding 'Livro podre' to parameter: 2
+10:45:56,952 TRACE IntegerType:151 - binding '32' to parameter: 3
+10:45:56,959 TRACE StringType:144 - binding null to parameter: 1
+10:45:56,960 TRACE StringType:144 - binding null to parameter: 2
+10:45:56,960 TRACE StringType:144 - binding null to parameter: 3
+10:45:56,961 TRACE StringType:151 - binding 'Author 2' to parameter: 4
+10:45:56,967 TRACE StringType:144 - binding null to parameter: 5
+10:45:56,967 TRACE StringType:144 - binding null to parameter: 6
+10:45:56,967 TRACE StringType:144 - binding null to parameter: 7
+10:45:56,967 TRACE StringType:144 - binding null to parameter: 8
+10:45:56,967 TRACE StringType:144 - binding null to parameter: 9
+10:45:56,968 TRACE IntegerType:151 - binding '32' to parameter: 10
+10:45:56,968 TRACE IntegerType:151 - binding '33' to parameter: 11
+10:45:56,969 TRACE BooleanType:151 - binding 'true' to parameter: 1
+10:45:56,970 TRACE IntegerType:144 - binding null to parameter: 2
+10:45:56,970 TRACE IntegerType:151 - binding '333333333' to parameter: 3
+10:45:56,970 TRACE IntegerType:151 - binding '32' to parameter: 4
+10:45:56,970 TRACE IntegerType:151 - binding '34' to parameter: 5
+10:45:56,971 TRACE IntegerType:151 - binding '32' to parameter: 1
+10:45:56,971 TRACE IntegerType:151 - binding '33' to parameter: 2
+10:45:56,973 TRACE IntegerType:151 - binding '32' to parameter: 1
+10:45:56,973 TRACE IntegerType:151 - binding '34' to parameter: 2
+10:49:52,713  INFO Version:15 - Hibernate Annotations 3.4.0.GA
+10:49:52,730  INFO Environment:543 - Hibernate 3.3.0.SP1
+10:49:52,735  INFO Environment:576 - hibernate.properties not found
+10:49:52,741  INFO Environment:709 - Bytecode provider name : javassist
+10:49:52,746  INFO Environment:627 - using JDK 1.4 java.sql.Timestamp handling
+10:49:52,814  INFO Version:14 - Hibernate Commons Annotations 3.1.0.GA
+10:49:52,817  INFO Configuration:1460 - configuring from resource: /hibernate.cfg.xml
+10:49:52,818  INFO Configuration:1437 - Configuration resource: /hibernate.cfg.xml
+10:49:53,324  INFO Configuration:1575 - Configured SessionFactory: null
+10:49:53,326  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+10:49:53,357  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Member
+10:49:53,388  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Member on table Member
+10:49:53,414  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Book
+10:49:53,415  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Book on table Book
+10:49:53,450  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.CopyBook
+10:49:53,451  INFO EntityBinder:422 - Bind entity MPP.Project1.model.CopyBook on table CopyBook
+10:49:53,454  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Author
+10:49:53,455  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Author on table Author
+10:49:53,507  INFO CollectionBinder:650 - Mapping collection: MPP.Project1.model.Book.copyBooks -> CopyBook
+10:49:53,508  INFO CollectionBinder:650 - Mapping collection: MPP.Project1.model.Book.authors -> Author
+10:49:53,517  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+10:49:53,526  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+10:49:53,526  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+10:49:53,527  INFO DriverManagerConnectionProvider:68 - autocommit mode: false
+10:49:53,542  INFO DriverManagerConnectionProvider:103 - using driver: org.postgresql.Driver at URL: jdbc:postgresql://localhost:5432/mppproject1
+10:49:53,543  INFO DriverManagerConnectionProvider:109 - connection properties: {password=****, user=postgres}
+10:49:53,647  INFO SettingsFactory:116 - RDBMS: PostgreSQL, version: 12.2
+10:49:53,647  INFO SettingsFactory:117 - JDBC driver: PostgreSQL JDBC Driver, version: 42.2.2.jre7
+10:49:53,666  INFO Dialect:175 - Using dialect: org.hibernate.dialect.PostgreSQLDialect
+10:49:53,670  INFO TransactionFactoryFactory:59 - Using default transaction strategy (direct JDBC transactions)
+10:49:53,672  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+10:49:53,672  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+10:49:53,672  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+10:49:53,673  INFO SettingsFactory:181 - JDBC batch size: 15
+10:49:53,676  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+10:49:53,676  INFO SettingsFactory:189 - Scrollable result sets: enabled
+10:49:53,677  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): enabled
+10:49:53,677  INFO SettingsFactory:205 - Connection release mode: auto
+10:49:53,677  INFO SettingsFactory:232 - Default batch fetch size: 1
+10:49:53,678  INFO SettingsFactory:236 - Generate SQL with comments: disabled
+10:49:53,679  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+10:49:53,679  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+10:49:53,679  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+10:49:53,681  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+10:49:53,681  INFO SettingsFactory:252 - Query language substitutions: {}
+10:49:53,681  INFO SettingsFactory:257 - JPA-QL strict compliance: disabled
+10:49:53,681  INFO SettingsFactory:262 - Second-level cache: enabled
+10:49:53,681  INFO SettingsFactory:266 - Query cache: disabled
+10:49:53,682  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+10:49:53,682  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+10:49:53,682  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+10:49:53,684  INFO SettingsFactory:305 - Echoing all SQL to stdout
+10:49:53,685  INFO SettingsFactory:314 - Statistics: disabled
+10:49:53,685  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+10:49:53,685  INFO SettingsFactory:333 - Default entity-mode: pojo
+10:49:53,688  INFO SettingsFactory:337 - Named query checking : enabled
+10:49:53,725  INFO SessionFactoryImpl:187 - building session factory
+10:49:53,858  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+10:49:53,860  INFO SchemaUpdate:138 - Running hbm2ddl schema update
+10:49:53,860  INFO SchemaUpdate:149 - fetching database metadata
+10:49:53,870  INFO SchemaUpdate:161 - updating schema
+10:49:53,875  INFO DatabaseMetadata:119 - table not found: Author
+10:49:53,903  INFO TableMetadata:62 - table found: public.author_book
+10:49:53,904  INFO TableMetadata:63 - columns: [books_id, author_id]
+10:49:53,904  INFO TableMetadata:65 - foreign keys: []
+10:49:53,904  INFO TableMetadata:66 - indexes: [author_book_books_id_key]
+10:49:53,906  INFO DatabaseMetadata:119 - table not found: Book
+10:49:53,908  INFO DatabaseMetadata:119 - table not found: CopyBook
+10:49:53,910  INFO DatabaseMetadata:119 - table not found: Member
+10:49:53,912  INFO DatabaseMetadata:119 - table not found: Author
+10:49:53,921  INFO DatabaseMetadata:119 - table not found: Book
+10:49:53,922  INFO DatabaseMetadata:119 - table not found: CopyBook
+10:49:53,923  INFO DatabaseMetadata:119 - table not found: Member
+10:49:53,947  INFO SchemaUpdate:183 - schema update complete
+10:49:54,000 TRACE StringType:151 - binding '63636363636363666' to parameter: 1
+10:49:54,000 TRACE StringType:151 - binding 'Livro podre' to parameter: 2
+10:49:54,001 TRACE IntegerType:151 - binding '35' to parameter: 3
+10:49:54,005 TRACE StringType:144 - binding null to parameter: 1
+10:49:54,005 TRACE StringType:144 - binding null to parameter: 2
+10:49:54,005 TRACE StringType:144 - binding null to parameter: 3
+10:49:54,005 TRACE StringType:151 - binding 'Author 2' to parameter: 4
+10:49:54,005 TRACE StringType:144 - binding null to parameter: 5
+10:49:54,006 TRACE StringType:144 - binding null to parameter: 6
+10:49:54,006 TRACE StringType:144 - binding null to parameter: 7
+10:49:54,006 TRACE StringType:144 - binding null to parameter: 8
+10:49:54,006 TRACE StringType:144 - binding null to parameter: 9
+10:49:54,006 TRACE IntegerType:151 - binding '35' to parameter: 10
+10:49:54,006 TRACE IntegerType:151 - binding '36' to parameter: 11
+10:49:54,008 TRACE BooleanType:151 - binding 'true' to parameter: 1
+10:49:54,008 TRACE IntegerType:144 - binding null to parameter: 2
+10:49:54,008 TRACE IntegerType:151 - binding '333333333' to parameter: 3
+10:49:54,008 TRACE IntegerType:151 - binding '35' to parameter: 4
+10:49:54,008 TRACE IntegerType:151 - binding '37' to parameter: 5
+10:49:54,010 TRACE IntegerType:151 - binding '35' to parameter: 1
+10:49:54,010 TRACE IntegerType:151 - binding '36' to parameter: 2
+10:49:54,011 TRACE IntegerType:151 - binding '35' to parameter: 1
+10:49:54,012 TRACE IntegerType:151 - binding '37' to parameter: 2
+10:57:31,145  INFO Version:15 - Hibernate Annotations 3.4.0.GA
+10:57:31,158  INFO Environment:543 - Hibernate 3.3.0.SP1
+10:57:31,162  INFO Environment:576 - hibernate.properties not found
+10:57:31,166  INFO Environment:709 - Bytecode provider name : javassist
+10:57:31,172  INFO Environment:627 - using JDK 1.4 java.sql.Timestamp handling
+10:57:31,220  INFO Version:14 - Hibernate Commons Annotations 3.1.0.GA
+10:57:31,223  INFO Configuration:1460 - configuring from resource: /hibernate.cfg.xml
+10:57:31,223  INFO Configuration:1437 - Configuration resource: /hibernate.cfg.xml
+10:57:31,863  INFO Configuration:1575 - Configured SessionFactory: null
+10:57:31,865  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+10:57:31,894  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Member
+10:57:31,918  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Member on table Member
+10:57:31,948  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Book
+10:57:31,948  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Book on table Book
+10:57:31,983  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.CopyBook
+10:57:31,983  INFO EntityBinder:422 - Bind entity MPP.Project1.model.CopyBook on table CopyBook
+10:57:31,989  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Author
+10:57:31,990  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Author on table Author
+10:57:32,037  INFO CollectionBinder:650 - Mapping collection: MPP.Project1.model.Book.copyBooks -> CopyBook
+10:57:32,038  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+10:57:32,043  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+10:57:32,044  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+10:57:32,044  INFO DriverManagerConnectionProvider:68 - autocommit mode: false
+10:57:32,059  INFO DriverManagerConnectionProvider:103 - using driver: org.postgresql.Driver at URL: jdbc:postgresql://localhost:5432/mppproject1
+10:57:32,060  INFO DriverManagerConnectionProvider:109 - connection properties: {password=****, user=postgres}
+10:57:32,139  INFO SettingsFactory:116 - RDBMS: PostgreSQL, version: 12.2
+10:57:32,139  INFO SettingsFactory:117 - JDBC driver: PostgreSQL JDBC Driver, version: 42.2.2.jre7
+10:57:32,151  INFO Dialect:175 - Using dialect: org.hibernate.dialect.PostgreSQLDialect
+10:57:32,154  INFO TransactionFactoryFactory:59 - Using default transaction strategy (direct JDBC transactions)
+10:57:32,155  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+10:57:32,155  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+10:57:32,155  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+10:57:32,156  INFO SettingsFactory:181 - JDBC batch size: 15
+10:57:32,156  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+10:57:32,156  INFO SettingsFactory:189 - Scrollable result sets: enabled
+10:57:32,156  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): enabled
+10:57:32,156  INFO SettingsFactory:205 - Connection release mode: auto
+10:57:32,157  INFO SettingsFactory:232 - Default batch fetch size: 1
+10:57:32,157  INFO SettingsFactory:236 - Generate SQL with comments: disabled
+10:57:32,157  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+10:57:32,157  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+10:57:32,158  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+10:57:32,159  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+10:57:32,159  INFO SettingsFactory:252 - Query language substitutions: {}
+10:57:32,159  INFO SettingsFactory:257 - JPA-QL strict compliance: disabled
+10:57:32,159  INFO SettingsFactory:262 - Second-level cache: enabled
+10:57:32,160  INFO SettingsFactory:266 - Query cache: disabled
+10:57:32,160  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+10:57:32,160  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+10:57:32,160  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+10:57:32,161  INFO SettingsFactory:305 - Echoing all SQL to stdout
+10:57:32,162  INFO SettingsFactory:314 - Statistics: disabled
+10:57:32,162  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+10:57:32,163  INFO SettingsFactory:333 - Default entity-mode: pojo
+10:57:32,163  INFO SettingsFactory:337 - Named query checking : enabled
+10:57:32,331  INFO SessionFactoryImpl:187 - building session factory
+10:57:32,417  INFO PojoInstantiator:84 - no default (no-argument) constructor for class: MPP.Project1.model.CopyBook (class must be instantiated by Interceptor)
+10:57:32,463  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+10:57:32,465  INFO SchemaUpdate:138 - Running hbm2ddl schema update
+10:57:32,465  INFO SchemaUpdate:149 - fetching database metadata
+10:57:32,475  INFO SchemaUpdate:161 - updating schema
+10:57:32,504  INFO TableMetadata:62 - table found: public.author
+10:57:32,504  INFO TableMetadata:63 - columns: [zip, authors_id, city, credentials, phone, street, bio, last_name, id, state, first_name]
+10:57:32,505  INFO TableMetadata:65 - foreign keys: []
+10:57:32,505  INFO TableMetadata:66 - indexes: [author_pkey]
+10:57:32,507  INFO DatabaseMetadata:119 - table not found: Author_Book
+10:57:32,509  INFO DatabaseMetadata:119 - table not found: Book
+10:57:32,511  INFO DatabaseMetadata:119 - table not found: Book_Author
+10:57:32,512  INFO DatabaseMetadata:119 - table not found: CopyBook
+10:57:32,527  INFO TableMetadata:62 - table found: public.member
+10:57:32,527  INFO TableMetadata:63 - columns: [zip, city, phone, street, last_name, id, state, first_name]
+10:57:32,527  INFO TableMetadata:65 - foreign keys: []
+10:57:32,527  INFO TableMetadata:66 - indexes: [member_pkey]
+10:57:32,529  INFO DatabaseMetadata:119 - table not found: Author_Book
+10:57:32,530  INFO DatabaseMetadata:119 - table not found: Book
+10:57:32,531  INFO DatabaseMetadata:119 - table not found: Book_Author
+10:57:32,533  INFO DatabaseMetadata:119 - table not found: CopyBook
+10:57:32,552  INFO SchemaUpdate:183 - schema update complete
+10:57:32,598 TRACE StringType:151 - binding '63636363636363666' to parameter: 1
+10:57:32,598 TRACE StringType:151 - binding 'Livro podre' to parameter: 2
+10:57:32,598 TRACE IntegerType:151 - binding '38' to parameter: 3
+10:57:32,601 TRACE StringType:144 - binding null to parameter: 1
+10:57:32,601 TRACE StringType:144 - binding null to parameter: 2
+10:57:32,602 TRACE StringType:144 - binding null to parameter: 3
+10:57:32,602 TRACE StringType:151 - binding 'Author 2' to parameter: 4
+10:57:32,602 TRACE StringType:144 - binding null to parameter: 5
+10:57:32,602 TRACE StringType:144 - binding null to parameter: 6
+10:57:32,602 TRACE StringType:144 - binding null to parameter: 7
+10:57:32,602 TRACE StringType:144 - binding null to parameter: 8
+10:57:32,602 TRACE StringType:144 - binding null to parameter: 9
+10:57:32,602 TRACE IntegerType:151 - binding '39' to parameter: 10
+10:57:32,616  WARN JDBCExceptionReporter:100 - SQL Error: 0, SQLState: 23502
+10:57:32,617 ERROR JDBCExceptionReporter:101 - Batch entry 0 insert into Author (bio, city, credentials, first_name, last_name, phone, state, street, zip, id) values (NULL, NULL, NULL, 'Author 2', NULL, NULL, NULL, NULL, NULL, 39) was aborted: ERROR: null value in column "authors_id" violates not-null constraint
+  Detail: Failing row contains (39, null, null, null, Author 2, null, null, null, null, null, null).  Call getNextException to see other errors in the batch.
+10:57:32,617  WARN JDBCExceptionReporter:100 - SQL Error: 0, SQLState: 23502
+10:57:32,617 ERROR JDBCExceptionReporter:101 - ERROR: null value in column "authors_id" violates not-null constraint
+  Detail: Failing row contains (39, null, null, null, Author 2, null, null, null, null, null, null).
+10:57:32,618 ERROR AbstractFlushingEventListener:324 - Could not synchronize database state with session
+org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:94)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:275)
+	at org.hibernate.jdbc.AbstractBatcher.prepareStatement(AbstractBatcher.java:114)
+	at org.hibernate.jdbc.AbstractBatcher.prepareStatement(AbstractBatcher.java:109)
+	at org.hibernate.jdbc.AbstractBatcher.prepareBatchStatement(AbstractBatcher.java:244)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2252)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2688)
+	at org.hibernate.action.EntityInsertAction.execute(EntityInsertAction.java:79)
+	at org.hibernate.engine.ActionQueue.execute(ActionQueue.java:279)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:263)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:167)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1027)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:365)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at MPP.Project1.model.Model.save(Model.java:19)
+	at MPP.Project1.App.main(App.java:46)
+Caused by: java.sql.BatchUpdateException: Batch entry 0 insert into Author (bio, city, credentials, first_name, last_name, phone, state, street, zip, id) values (NULL, NULL, NULL, 'Author 2', NULL, NULL, NULL, NULL, NULL, 39) was aborted: ERROR: null value in column "authors_id" violates not-null constraint
+  Detail: Failing row contains (39, null, null, null, Author 2, null, null, null, null, null, null).  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:145)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2179)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:479)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:835)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1556)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	... 16 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "authors_id" violates not-null constraint
+  Detail: Failing row contains (39, null, null, null, Author 2, null, null, null, null, null, null).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+	... 21 more
+11:03:52,202  INFO Version:15 - Hibernate Annotations 3.4.0.GA
+11:03:52,220  INFO Environment:543 - Hibernate 3.3.0.SP1
+11:03:52,224  INFO Environment:576 - hibernate.properties not found
+11:03:52,229  INFO Environment:709 - Bytecode provider name : javassist
+11:03:52,297  INFO Environment:627 - using JDK 1.4 java.sql.Timestamp handling
+11:03:52,363  INFO Version:14 - Hibernate Commons Annotations 3.1.0.GA
+11:03:52,365  INFO Configuration:1460 - configuring from resource: /hibernate.cfg.xml
+11:03:52,366  INFO Configuration:1437 - Configuration resource: /hibernate.cfg.xml
+11:03:53,070  INFO Configuration:1575 - Configured SessionFactory: null
+11:03:53,072  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+11:03:53,102  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Member
+11:03:53,124  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Member on table Member
+11:03:53,152  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Book
+11:03:53,153  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Book on table Book
+11:03:53,178  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.CopyBook
+11:03:53,178  INFO EntityBinder:422 - Bind entity MPP.Project1.model.CopyBook on table CopyBook
+11:03:53,183  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Author
+11:03:53,184  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Author on table Author
+11:03:53,241  INFO CollectionBinder:650 - Mapping collection: MPP.Project1.model.Book.copyBooks -> CopyBook
+11:03:53,243  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+11:03:53,247  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+11:03:53,247  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+11:03:53,248  INFO DriverManagerConnectionProvider:68 - autocommit mode: false
+11:03:53,261  INFO DriverManagerConnectionProvider:103 - using driver: org.postgresql.Driver at URL: jdbc:postgresql://localhost:5432/mppproject1
+11:03:53,261  INFO DriverManagerConnectionProvider:109 - connection properties: {password=****, user=postgres}
+11:03:53,343  INFO SettingsFactory:116 - RDBMS: PostgreSQL, version: 12.2
+11:03:53,343  INFO SettingsFactory:117 - JDBC driver: PostgreSQL JDBC Driver, version: 42.2.2.jre7
+11:03:53,356  INFO Dialect:175 - Using dialect: org.hibernate.dialect.PostgreSQLDialect
+11:03:53,360  INFO TransactionFactoryFactory:59 - Using default transaction strategy (direct JDBC transactions)
+11:03:53,361  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+11:03:53,361  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+11:03:53,361  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+11:03:53,362  INFO SettingsFactory:181 - JDBC batch size: 15
+11:03:53,362  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+11:03:53,363  INFO SettingsFactory:189 - Scrollable result sets: enabled
+11:03:53,366  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): enabled
+11:03:53,366  INFO SettingsFactory:205 - Connection release mode: auto
+11:03:53,367  INFO SettingsFactory:232 - Default batch fetch size: 1
+11:03:53,367  INFO SettingsFactory:236 - Generate SQL with comments: disabled
+11:03:53,367  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+11:03:53,368  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+11:03:53,368  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+11:03:53,369  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+11:03:53,370  INFO SettingsFactory:252 - Query language substitutions: {}
+11:03:53,370  INFO SettingsFactory:257 - JPA-QL strict compliance: disabled
+11:03:53,370  INFO SettingsFactory:262 - Second-level cache: enabled
+11:03:53,370  INFO SettingsFactory:266 - Query cache: disabled
+11:03:53,370  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+11:03:53,370  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+11:03:53,370  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+11:03:53,372  INFO SettingsFactory:305 - Echoing all SQL to stdout
+11:03:53,373  INFO SettingsFactory:314 - Statistics: disabled
+11:03:53,373  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+11:03:53,374  INFO SettingsFactory:333 - Default entity-mode: pojo
+11:03:53,374  INFO SettingsFactory:337 - Named query checking : enabled
+11:03:53,536  INFO SessionFactoryImpl:187 - building session factory
+11:03:53,628  INFO PojoInstantiator:84 - no default (no-argument) constructor for class: MPP.Project1.model.CopyBook (class must be instantiated by Interceptor)
+11:03:53,673  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+11:03:53,675  INFO SchemaUpdate:138 - Running hbm2ddl schema update
+11:03:53,676  INFO SchemaUpdate:149 - fetching database metadata
+11:03:53,689  INFO SchemaUpdate:161 - updating schema
+11:03:53,696  INFO DatabaseMetadata:119 - table not found: Author
+11:03:53,698  INFO DatabaseMetadata:119 - table not found: Author_Book
+11:03:53,723  INFO TableMetadata:62 - table found: public.book
+11:03:53,723  INFO TableMetadata:63 - columns: [isbn, id, title]
+11:03:53,723  INFO TableMetadata:65 - foreign keys: []
+11:03:53,724  INFO TableMetadata:66 - indexes: [book_pkey]
+11:03:53,726  INFO DatabaseMetadata:119 - table not found: Book_Author
+11:03:53,741  INFO TableMetadata:62 - table found: public.copybook
+11:03:53,741  INFO TableMetadata:63 - columns: [number, copybooks_id, id, availability, book_id]
+11:03:53,741  INFO TableMetadata:65 - foreign keys: [fke5aa001ea136e2e8, fke5aa001eb03103d4]
+11:03:53,741  INFO TableMetadata:66 - indexes: [copybook_pkey]
+11:03:53,757  INFO TableMetadata:62 - table found: public.member
+11:03:53,757  INFO TableMetadata:63 - columns: [zip, city, phone, street, last_name, id, state, first_name]
+11:03:53,758  INFO TableMetadata:65 - foreign keys: []
+11:03:53,758  INFO TableMetadata:66 - indexes: [member_pkey]
+11:03:53,761  INFO DatabaseMetadata:119 - table not found: Author
+11:03:53,763  INFO DatabaseMetadata:119 - table not found: Author_Book
+11:03:53,764  INFO DatabaseMetadata:119 - table not found: Book_Author
+11:03:53,781  INFO SchemaUpdate:183 - schema update complete
+11:03:53,828 TRACE StringType:151 - binding '63636363636363666' to parameter: 1
+11:03:53,829 TRACE StringType:151 - binding 'Livro podre' to parameter: 2
+11:03:53,829 TRACE IntegerType:151 - binding '41' to parameter: 3
+11:03:53,831 TRACE StringType:144 - binding null to parameter: 1
+11:03:53,832 TRACE StringType:144 - binding null to parameter: 2
+11:03:53,832 TRACE StringType:144 - binding null to parameter: 3
+11:03:53,832 TRACE StringType:151 - binding 'Author 2' to parameter: 4
+11:03:53,832 TRACE StringType:144 - binding null to parameter: 5
+11:03:53,832 TRACE StringType:144 - binding null to parameter: 6
+11:03:53,832 TRACE StringType:144 - binding null to parameter: 7
+11:03:53,832 TRACE StringType:144 - binding null to parameter: 8
+11:03:53,833 TRACE StringType:144 - binding null to parameter: 9
+11:03:53,833 TRACE IntegerType:151 - binding '42' to parameter: 10
+11:03:53,834 TRACE BooleanType:151 - binding 'true' to parameter: 1
+11:03:53,834 TRACE IntegerType:151 - binding '41' to parameter: 2
+11:03:53,834 TRACE IntegerType:151 - binding '333333333' to parameter: 3
+11:03:53,834 TRACE IntegerType:151 - binding '41' to parameter: 4
+11:03:53,834 TRACE IntegerType:151 - binding '43' to parameter: 5
+11:03:53,837 TRACE IntegerType:151 - binding '41' to parameter: 1
+11:03:53,837 TRACE IntegerType:151 - binding '42' to parameter: 2
+11:03:53,838 TRACE IntegerType:151 - binding '41' to parameter: 1
+11:03:53,838 TRACE IntegerType:151 - binding '43' to parameter: 2
+11:16:29,688  INFO Version:15 - Hibernate Annotations 3.4.0.GA
+11:16:29,702  INFO Environment:543 - Hibernate 3.3.0.SP1
+11:16:29,706  INFO Environment:576 - hibernate.properties not found
+11:16:29,710  INFO Environment:709 - Bytecode provider name : javassist
+11:16:29,717  INFO Environment:627 - using JDK 1.4 java.sql.Timestamp handling
+11:16:29,764  INFO Version:14 - Hibernate Commons Annotations 3.1.0.GA
+11:16:29,766  INFO Configuration:1460 - configuring from resource: /hibernate.cfg.xml
+11:16:29,766  INFO Configuration:1437 - Configuration resource: /hibernate.cfg.xml
+11:16:30,317  INFO Configuration:1575 - Configured SessionFactory: null
+11:16:30,321  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+11:16:30,348  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Member
+11:16:30,369  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Member on table Member
+11:16:30,392  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Book
+11:16:30,392  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Book on table Book
+11:16:30,420  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.CopyBook
+11:16:30,421  INFO EntityBinder:422 - Bind entity MPP.Project1.model.CopyBook on table CopyBook
+11:16:30,427  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Author
+11:16:30,428  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Author on table Author
+11:16:30,470  INFO CollectionBinder:650 - Mapping collection: MPP.Project1.model.Book.copyBooks -> CopyBook
+11:16:30,471  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+11:16:30,475  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+11:16:30,476  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+11:16:30,476  INFO DriverManagerConnectionProvider:68 - autocommit mode: false
+11:16:30,498  INFO DriverManagerConnectionProvider:103 - using driver: org.postgresql.Driver at URL: jdbc:postgresql://localhost:5432/mppproject1
+11:16:30,499  INFO DriverManagerConnectionProvider:109 - connection properties: {password=****, user=postgres}
+11:16:30,578  INFO SettingsFactory:116 - RDBMS: PostgreSQL, version: 12.2
+11:16:30,579  INFO SettingsFactory:117 - JDBC driver: PostgreSQL JDBC Driver, version: 42.2.2.jre7
+11:16:30,589  INFO Dialect:175 - Using dialect: org.hibernate.dialect.PostgreSQLDialect
+11:16:30,592  INFO TransactionFactoryFactory:59 - Using default transaction strategy (direct JDBC transactions)
+11:16:30,593  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+11:16:30,594  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+11:16:30,594  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+11:16:30,594  INFO SettingsFactory:181 - JDBC batch size: 15
+11:16:30,594  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+11:16:30,594  INFO SettingsFactory:189 - Scrollable result sets: enabled
+11:16:30,595  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): enabled
+11:16:30,595  INFO SettingsFactory:205 - Connection release mode: auto
+11:16:30,595  INFO SettingsFactory:232 - Default batch fetch size: 1
+11:16:30,595  INFO SettingsFactory:236 - Generate SQL with comments: disabled
+11:16:30,596  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+11:16:30,596  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+11:16:30,596  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+11:16:30,597  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+11:16:30,598  INFO SettingsFactory:252 - Query language substitutions: {}
+11:16:30,598  INFO SettingsFactory:257 - JPA-QL strict compliance: disabled
+11:16:30,598  INFO SettingsFactory:262 - Second-level cache: enabled
+11:16:30,598  INFO SettingsFactory:266 - Query cache: disabled
+11:16:30,598  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+11:16:30,598  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+11:16:30,598  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+11:16:30,600  INFO SettingsFactory:305 - Echoing all SQL to stdout
+11:16:30,600  INFO SettingsFactory:314 - Statistics: disabled
+11:16:30,601  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+11:16:30,601  INFO SettingsFactory:333 - Default entity-mode: pojo
+11:16:30,601  INFO SettingsFactory:337 - Named query checking : enabled
+11:16:30,950  INFO SessionFactoryImpl:187 - building session factory
+11:16:31,051  INFO PojoInstantiator:84 - no default (no-argument) constructor for class: MPP.Project1.model.CopyBook (class must be instantiated by Interceptor)
+11:16:31,095  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+11:16:31,101  INFO SchemaUpdate:138 - Running hbm2ddl schema update
+11:16:31,101  INFO SchemaUpdate:149 - fetching database metadata
+11:16:31,140  INFO SchemaUpdate:161 - updating schema
+11:16:31,225  INFO TableMetadata:62 - table found: public.author
+11:16:31,225  INFO TableMetadata:63 - columns: [zip, city, credentials, phone, street, bio, last_name, id, state, first_name]
+11:16:31,226  INFO TableMetadata:65 - foreign keys: []
+11:16:31,226  INFO TableMetadata:66 - indexes: [author_pkey]
+11:16:31,247  INFO TableMetadata:62 - table found: public.book
+11:16:31,247  INFO TableMetadata:63 - columns: [isbn, id, title]
+11:16:31,247  INFO TableMetadata:65 - foreign keys: []
+11:16:31,248  INFO TableMetadata:66 - indexes: [book_pkey]
+11:16:31,262  INFO TableMetadata:62 - table found: public.copybook
+11:16:31,263  INFO TableMetadata:63 - columns: [number, copybooks_id, id, availability, book_id]
+11:16:31,263  INFO TableMetadata:65 - foreign keys: [fke5aa001ea136e2e8, fke5aa001eb03103d4]
+11:16:31,263  INFO TableMetadata:66 - indexes: [copybook_pkey]
+11:16:31,289  INFO TableMetadata:62 - table found: public.member
+11:16:31,290  INFO TableMetadata:63 - columns: [zip, city, phone, street, last_name, id, state, first_name]
+11:16:31,290  INFO TableMetadata:65 - foreign keys: []
+11:16:31,290  INFO TableMetadata:66 - indexes: [member_pkey]
+11:16:31,294  INFO DatabaseMetadata:119 - table not found: book_author
+11:16:31,298  INFO DatabaseMetadata:119 - table not found: book_author
+11:16:31,317  INFO SchemaUpdate:183 - schema update complete
+11:16:31,423 TRACE StringType:151 - binding '63636363636363666' to parameter: 1
+11:16:31,423 TRACE StringType:151 - binding 'Livro podre' to parameter: 2
+11:16:31,424 TRACE IntegerType:151 - binding '44' to parameter: 3
+11:16:31,431 TRACE StringType:144 - binding null to parameter: 1
+11:16:31,432 TRACE StringType:144 - binding null to parameter: 2
+11:16:31,432 TRACE StringType:144 - binding null to parameter: 3
+11:16:31,432 TRACE StringType:151 - binding 'Author 2' to parameter: 4
+11:16:31,432 TRACE StringType:144 - binding null to parameter: 5
+11:16:31,433 TRACE StringType:144 - binding null to parameter: 6
+11:16:31,433 TRACE StringType:144 - binding null to parameter: 7
+11:16:31,433 TRACE StringType:144 - binding null to parameter: 8
+11:16:31,435 TRACE StringType:144 - binding null to parameter: 9
+11:16:31,435 TRACE IntegerType:151 - binding '45' to parameter: 10
+11:16:31,437 TRACE BooleanType:151 - binding 'true' to parameter: 1
+11:16:31,437 TRACE IntegerType:151 - binding '44' to parameter: 2
+11:16:31,438 TRACE IntegerType:151 - binding '333333333' to parameter: 3
+11:16:31,438 TRACE IntegerType:151 - binding '44' to parameter: 4
+11:16:31,439 TRACE IntegerType:151 - binding '46' to parameter: 5
+11:16:31,442 TRACE IntegerType:151 - binding '44' to parameter: 1
+11:16:31,443 TRACE IntegerType:151 - binding '45' to parameter: 2
+11:16:31,455  WARN JDBCExceptionReporter:100 - SQL Error: 0, SQLState: 23502
+11:16:31,455 ERROR JDBCExceptionReporter:101 - Batch entry 0 insert into book_author (Book_id, authors_id) values (44, 45) was aborted: ERROR: null value in column "author_id" violates not-null constraint
+  Detail: Failing row contains (null, null, 44, 45).  Call getNextException to see other errors in the batch.
+11:16:31,456  WARN JDBCExceptionReporter:100 - SQL Error: 0, SQLState: 23502
+11:16:31,456 ERROR JDBCExceptionReporter:101 - ERROR: null value in column "author_id" violates not-null constraint
+  Detail: Failing row contains (null, null, 44, 45).
+11:16:31,458 ERROR AbstractFlushingEventListener:324 - Could not synchronize database state with session
+org.hibernate.exception.ConstraintViolationException: Could not execute JDBC batch update
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:94)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:275)
+	at org.hibernate.jdbc.AbstractBatcher.prepareStatement(AbstractBatcher.java:114)
+	at org.hibernate.jdbc.AbstractBatcher.prepareStatement(AbstractBatcher.java:109)
+	at org.hibernate.jdbc.AbstractBatcher.prepareBatchStatement(AbstractBatcher.java:244)
+	at org.hibernate.persister.collection.AbstractCollectionPersister.recreate(AbstractCollectionPersister.java:1141)
+	at org.hibernate.action.CollectionRecreateAction.execute(CollectionRecreateAction.java:58)
+	at org.hibernate.engine.ActionQueue.execute(ActionQueue.java:279)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:263)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:171)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1027)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:365)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at MPP.Project1.model.Model.save(Model.java:19)
+	at MPP.Project1.App.main(App.java:46)
+Caused by: java.sql.BatchUpdateException: Batch entry 0 insert into book_author (Book_id, authors_id) values (44, 45) was aborted: ERROR: null value in column "author_id" violates not-null constraint
+  Detail: Failing row contains (null, null, 44, 45).  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:145)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2179)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:479)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:835)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1556)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	... 15 more
+Caused by: org.postgresql.util.PSQLException: ERROR: null value in column "author_id" violates not-null constraint
+  Detail: Failing row contains (null, null, 44, 45).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+	... 20 more
+11:20:25,917  INFO Version:15 - Hibernate Annotations 3.4.0.GA
+11:20:25,933  INFO Environment:543 - Hibernate 3.3.0.SP1
+11:20:25,937  INFO Environment:576 - hibernate.properties not found
+11:20:25,941  INFO Environment:709 - Bytecode provider name : javassist
+11:20:25,947  INFO Environment:627 - using JDK 1.4 java.sql.Timestamp handling
+11:20:25,984  INFO Version:14 - Hibernate Commons Annotations 3.1.0.GA
+11:20:25,986  INFO Configuration:1460 - configuring from resource: /hibernate.cfg.xml
+11:20:25,987  INFO Configuration:1437 - Configuration resource: /hibernate.cfg.xml
+11:20:26,691  INFO Configuration:1575 - Configured SessionFactory: null
+11:20:26,693  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+11:20:26,724  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Member
+11:20:26,747  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Member on table Member
+11:20:26,773  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Book
+11:20:26,774  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Book on table Book
+11:20:26,813  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.CopyBook
+11:20:26,813  INFO EntityBinder:422 - Bind entity MPP.Project1.model.CopyBook on table CopyBook
+11:20:26,818  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Author
+11:20:26,819  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Author on table Author
+11:20:26,864  INFO CollectionBinder:650 - Mapping collection: MPP.Project1.model.Book.copyBooks -> CopyBook
+11:20:26,865  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+11:20:26,869  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+11:20:26,870  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+11:20:26,870  INFO DriverManagerConnectionProvider:68 - autocommit mode: false
+11:20:26,889  INFO DriverManagerConnectionProvider:103 - using driver: org.postgresql.Driver at URL: jdbc:postgresql://localhost:5432/mppproject1
+11:20:26,889  INFO DriverManagerConnectionProvider:109 - connection properties: {password=****, user=postgres}
+11:20:26,960  INFO SettingsFactory:116 - RDBMS: PostgreSQL, version: 12.2
+11:20:26,961  INFO SettingsFactory:117 - JDBC driver: PostgreSQL JDBC Driver, version: 42.2.2.jre7
+11:20:26,971  INFO Dialect:175 - Using dialect: org.hibernate.dialect.PostgreSQLDialect
+11:20:26,974  INFO TransactionFactoryFactory:59 - Using default transaction strategy (direct JDBC transactions)
+11:20:26,975  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+11:20:26,975  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+11:20:26,976  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+11:20:26,976  INFO SettingsFactory:181 - JDBC batch size: 15
+11:20:26,976  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+11:20:26,976  INFO SettingsFactory:189 - Scrollable result sets: enabled
+11:20:26,976  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): enabled
+11:20:26,977  INFO SettingsFactory:205 - Connection release mode: auto
+11:20:26,977  INFO SettingsFactory:232 - Default batch fetch size: 1
+11:20:26,977  INFO SettingsFactory:236 - Generate SQL with comments: disabled
+11:20:26,978  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+11:20:26,978  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+11:20:26,978  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+11:20:26,980  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+11:20:26,981  INFO SettingsFactory:252 - Query language substitutions: {}
+11:20:26,981  INFO SettingsFactory:257 - JPA-QL strict compliance: disabled
+11:20:26,981  INFO SettingsFactory:262 - Second-level cache: enabled
+11:20:26,981  INFO SettingsFactory:266 - Query cache: disabled
+11:20:26,981  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+11:20:26,982  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+11:20:26,982  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+11:20:26,985  INFO SettingsFactory:305 - Echoing all SQL to stdout
+11:20:26,986  INFO SettingsFactory:314 - Statistics: disabled
+11:20:26,986  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+11:20:26,987  INFO SettingsFactory:333 - Default entity-mode: pojo
+11:20:26,987  INFO SettingsFactory:337 - Named query checking : enabled
+11:20:27,210  INFO SessionFactoryImpl:187 - building session factory
+11:20:27,307  INFO PojoInstantiator:84 - no default (no-argument) constructor for class: MPP.Project1.model.CopyBook (class must be instantiated by Interceptor)
+11:20:27,358  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+11:20:27,359  INFO SchemaUpdate:138 - Running hbm2ddl schema update
+11:20:27,360  INFO SchemaUpdate:149 - fetching database metadata
+11:20:27,375  INFO SchemaUpdate:161 - updating schema
+11:20:27,406  INFO TableMetadata:62 - table found: public.author
+11:20:27,406  INFO TableMetadata:63 - columns: [zip, city, credentials, phone, street, bio, last_name, id, state, first_name]
+11:20:27,406  INFO TableMetadata:65 - foreign keys: []
+11:20:27,407  INFO TableMetadata:66 - indexes: [author_pkey]
+11:20:27,422  INFO TableMetadata:62 - table found: public.book
+11:20:27,423  INFO TableMetadata:63 - columns: [isbn, id, title]
+11:20:27,423  INFO TableMetadata:65 - foreign keys: []
+11:20:27,423  INFO TableMetadata:66 - indexes: [book_pkey]
+11:20:27,444  INFO TableMetadata:62 - table found: public.copybook
+11:20:27,444  INFO TableMetadata:63 - columns: [number, copybooks_id, id, availability, book_id]
+11:20:27,445  INFO TableMetadata:65 - foreign keys: [fke5aa001ea136e2e8, fke5aa001eb03103d4]
+11:20:27,445  INFO TableMetadata:66 - indexes: [copybook_pkey]
+11:20:27,462  INFO TableMetadata:62 - table found: public.member
+11:20:27,462  INFO TableMetadata:63 - columns: [zip, city, phone, street, last_name, id, state, first_name]
+11:20:27,462  INFO TableMetadata:65 - foreign keys: []
+11:20:27,463  INFO TableMetadata:66 - indexes: [member_pkey]
+11:20:27,464  INFO DatabaseMetadata:119 - table not found: book_author
+11:20:27,466  INFO DatabaseMetadata:119 - table not found: book_author
+11:20:27,472  INFO SchemaUpdate:183 - schema update complete
+11:20:27,522 TRACE StringType:151 - binding '63636363636363666' to parameter: 1
+11:20:27,522 TRACE StringType:151 - binding 'Livro podre' to parameter: 2
+11:20:27,523 TRACE IntegerType:151 - binding '47' to parameter: 3
+11:20:27,526 TRACE StringType:144 - binding null to parameter: 1
+11:20:27,526 TRACE StringType:144 - binding null to parameter: 2
+11:20:27,526 TRACE StringType:144 - binding null to parameter: 3
+11:20:27,526 TRACE StringType:151 - binding 'Author 2' to parameter: 4
+11:20:27,526 TRACE StringType:144 - binding null to parameter: 5
+11:20:27,526 TRACE StringType:144 - binding null to parameter: 6
+11:20:27,526 TRACE StringType:144 - binding null to parameter: 7
+11:20:27,527 TRACE StringType:144 - binding null to parameter: 8
+11:20:27,527 TRACE StringType:144 - binding null to parameter: 9
+11:20:27,527 TRACE IntegerType:151 - binding '48' to parameter: 10
+11:20:27,528 TRACE BooleanType:151 - binding 'true' to parameter: 1
+11:20:27,528 TRACE IntegerType:151 - binding '47' to parameter: 2
+11:20:27,529 TRACE IntegerType:151 - binding '333333333' to parameter: 3
+11:20:27,529 TRACE IntegerType:151 - binding '47' to parameter: 4
+11:20:27,529 TRACE IntegerType:151 - binding '49' to parameter: 5
+11:20:27,531 TRACE IntegerType:151 - binding '47' to parameter: 1
+11:20:27,531 TRACE IntegerType:151 - binding '48' to parameter: 2
+11:20:27,532 TRACE IntegerType:151 - binding '47' to parameter: 1
+11:20:27,532 TRACE IntegerType:151 - binding '49' to parameter: 2

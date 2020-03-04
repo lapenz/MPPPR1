@@ -7,6 +7,9 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.LazyCollection;
@@ -23,13 +26,30 @@ public class Book extends Model<Book> implements Serializable{
  	private int id;
 	private String title;
 	private String isbn;
-	@OneToMany( cascade = {CascadeType.ALL})
-	@LazyCollection(LazyCollectionOption.FALSE)
+	
+	@ManyToMany( cascade = {CascadeType.ALL})
+	@JoinTable(name="book_author", 
+    joinColumns = { @JoinColumn(name = "book_id") }, 
+    inverseJoinColumns = { @JoinColumn(name = "author_id")})
 	private List<Author> authors = new ArrayList<Author>();
 	
 	@OneToMany(cascade = {CascadeType.ALL})
+	@JoinColumn(nullable = false)
 	@LazyCollection(LazyCollectionOption.FALSE)
 	private List<CopyBook> copyBooks = new ArrayList<CopyBook>();	
+	
+	public Book() {
+		
+	}
+
+	public Book(int id, String title, String isbn, List<Author> authors, List<CopyBook> copyBooks) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.isbn = isbn;
+		this.authors = authors;
+		this.copyBooks = copyBooks;
+	}
 	
 	public String getTitle() {
 		return title;

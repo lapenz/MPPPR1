@@ -3,9 +3,11 @@ package MPP.Project1.model;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+@Entity
 public class User extends Model<User> implements Serializable {
 	
 
