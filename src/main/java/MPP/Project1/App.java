@@ -2,7 +2,7 @@ package MPP.Project1;
 
 import java.util.List;
 
-import MPP.Project1.model.Author;
+import MPP.Project1.controller.BookController;
 import MPP.Project1.model.Book;
 import MPP.Project1.model.CopyBook;
 
@@ -45,13 +45,11 @@ public class App
 //       book.save();
     	
     	
-    	Author at = new Author().find(48);
-    	Book bk = new Book().find(47);
+    	Book bk = new BookController().find(47);
     	List<CopyBook> lst = bk.getCopyBooks();
     	
 		System.out.println(bk.getAuthors());
 
-		System.out.println(at.getBooks());
 		System.out.println(lst.get(0));
     	
 //		System.out.println(books.toString());

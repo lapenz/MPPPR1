@@ -5879,3 +5879,108 @@ org.hibernate.LazyInitializationException: failed to lazily initialize a collect
 12:21:31,898 TRACE IntegerType:193 - returning '333333333' as column: number2_1_
 12:21:31,898 TRACE IntegerType:193 - returning '47' as column: copyBooks5_2_
 12:21:31,898 TRACE IntegerType:193 - returning '49' as column: id2_
+14:52:58,757  INFO Version:15 - Hibernate Annotations 3.4.0.GA
+14:52:58,769  INFO Environment:543 - Hibernate 3.3.0.SP1
+14:52:58,773  INFO Environment:576 - hibernate.properties not found
+14:52:58,776  INFO Environment:709 - Bytecode provider name : javassist
+14:52:58,780  INFO Environment:627 - using JDK 1.4 java.sql.Timestamp handling
+14:52:58,820  INFO Version:14 - Hibernate Commons Annotations 3.1.0.GA
+14:52:58,823  INFO Configuration:1460 - configuring from resource: /hibernate.cfg.xml
+14:52:58,824  INFO Configuration:1437 - Configuration resource: /hibernate.cfg.xml
+14:52:59,684  INFO Configuration:1575 - Configured SessionFactory: null
+14:52:59,687  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+14:52:59,711  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Member
+14:52:59,730  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Member on table Member
+14:52:59,759  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Book
+14:52:59,759  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Book on table Book
+14:52:59,787  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.CopyBook
+14:52:59,787  INFO EntityBinder:422 - Bind entity MPP.Project1.model.CopyBook on table CopyBook
+14:52:59,791  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Author
+14:52:59,791  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Author on table Author
+14:52:59,848  INFO CollectionBinder:650 - Mapping collection: MPP.Project1.model.Book.copyBooks -> CopyBook
+14:52:59,849  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+14:52:59,853  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+14:52:59,853  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+14:52:59,853  INFO DriverManagerConnectionProvider:68 - autocommit mode: false
+14:52:59,864  INFO DriverManagerConnectionProvider:103 - using driver: org.postgresql.Driver at URL: jdbc:postgresql://localhost:5432/mppproject1
+14:52:59,864  INFO DriverManagerConnectionProvider:109 - connection properties: {password=****, user=postgres}
+14:52:59,942  INFO SettingsFactory:116 - RDBMS: PostgreSQL, version: 12.2
+14:52:59,942  INFO SettingsFactory:117 - JDBC driver: PostgreSQL JDBC Driver, version: 42.2.2.jre7
+14:52:59,948  INFO Dialect:175 - Using dialect: org.hibernate.dialect.PostgreSQLDialect
+14:52:59,951  INFO TransactionFactoryFactory:59 - Using default transaction strategy (direct JDBC transactions)
+14:52:59,952  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+14:52:59,952  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+14:52:59,952  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+14:52:59,952  INFO SettingsFactory:181 - JDBC batch size: 15
+14:52:59,953  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+14:52:59,957  INFO SettingsFactory:189 - Scrollable result sets: enabled
+14:52:59,957  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): enabled
+14:52:59,957  INFO SettingsFactory:205 - Connection release mode: auto
+14:52:59,958  INFO SettingsFactory:232 - Default batch fetch size: 1
+14:52:59,958  INFO SettingsFactory:236 - Generate SQL with comments: disabled
+14:52:59,958  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+14:52:59,959  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+14:52:59,959  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+14:52:59,961  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+14:52:59,962  INFO SettingsFactory:252 - Query language substitutions: {}
+14:52:59,962  INFO SettingsFactory:257 - JPA-QL strict compliance: disabled
+14:52:59,962  INFO SettingsFactory:262 - Second-level cache: enabled
+14:52:59,962  INFO SettingsFactory:266 - Query cache: disabled
+14:52:59,962  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+14:52:59,963  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+14:52:59,963  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+14:52:59,965  INFO SettingsFactory:305 - Echoing all SQL to stdout
+14:52:59,965  INFO SettingsFactory:314 - Statistics: disabled
+14:52:59,966  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+14:52:59,966  INFO SettingsFactory:333 - Default entity-mode: pojo
+14:52:59,966  INFO SettingsFactory:337 - Named query checking : enabled
+14:53:00,125  INFO SessionFactoryImpl:187 - building session factory
+14:53:00,235  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+14:53:00,237  INFO SchemaUpdate:138 - Running hbm2ddl schema update
+14:53:00,237  INFO SchemaUpdate:149 - fetching database metadata
+14:53:00,253  INFO SchemaUpdate:161 - updating schema
+14:53:00,283  INFO TableMetadata:62 - table found: public.author
+14:53:00,284  INFO TableMetadata:63 - columns: [zip, city, credentials, phone, street, bio, last_name, id, state, first_name]
+14:53:00,284  INFO TableMetadata:65 - foreign keys: []
+14:53:00,284  INFO TableMetadata:66 - indexes: [author_pkey]
+14:53:00,298  INFO TableMetadata:62 - table found: public.book
+14:53:00,299  INFO TableMetadata:63 - columns: [isbn, id, title]
+14:53:00,299  INFO TableMetadata:65 - foreign keys: []
+14:53:00,299  INFO TableMetadata:66 - indexes: [book_pkey]
+14:53:00,314  INFO TableMetadata:62 - table found: public.copybook
+14:53:00,314  INFO TableMetadata:63 - columns: [number, copybooks_id, id, availability, book_id]
+14:53:00,314  INFO TableMetadata:65 - foreign keys: [fke5aa001ea136e2e8, fke5aa001eb03103d4]
+14:53:00,314  INFO TableMetadata:66 - indexes: [copybook_pkey]
+14:53:00,327  INFO TableMetadata:62 - table found: public.member
+14:53:00,327  INFO TableMetadata:63 - columns: [zip, city, phone, street, last_name, id, state, first_name]
+14:53:00,327  INFO TableMetadata:65 - foreign keys: []
+14:53:00,328  INFO TableMetadata:66 - indexes: [member_pkey]
+14:53:00,339  INFO TableMetadata:62 - table found: public.book_author
+14:53:00,340  INFO TableMetadata:63 - columns: [book_id, author_id]
+14:53:00,340  INFO TableMetadata:65 - foreign keys: [fkedcb7ba145ea2214, fkedcb7ba1b03103d4]
+14:53:00,340  INFO TableMetadata:66 - indexes: []
+14:53:00,340  INFO SchemaUpdate:183 - schema update complete
+14:53:00,437 TRACE IntegerType:193 - returning '47' as column: id1_
+14:53:00,441 TRACE StringType:193 - returning '63636363636363666' as column: isbn1_
+14:53:00,441 TRACE StringType:193 - returning 'Livro podre' as column: title1_
+14:53:00,447 TRACE IntegerType:151 - binding '47' to parameter: 1
+14:53:00,450 TRACE IntegerType:193 - returning '47' as column: id1_0_
+14:53:00,451 TRACE IntegerType:193 - returning '49' as column: id2_1_
+14:53:00,451 TRACE BooleanType:193 - returning 'true' as column: availabi2_2_1_
+14:53:00,451 TRACE IntegerType:193 - returning '47' as column: book4_2_1_
+14:53:00,451 TRACE IntegerType:193 - returning '333333333' as column: number2_1_
+14:53:00,451 TRACE IntegerType:193 - returning '47' as column: copyBooks5_2_
+14:53:00,452 TRACE IntegerType:193 - returning '49' as column: id2_
+14:53:00,453 TRACE IntegerType:151 - binding '47' to parameter: 1
+14:53:00,454 TRACE IntegerType:193 - returning '48' as column: id3_0_
+14:53:00,454 TRACE StringType:187 - returning null as column: bio3_0_
+14:53:00,454 TRACE StringType:187 - returning null as column: city3_0_
+14:53:00,454 TRACE StringType:187 - returning null as column: credenti4_3_0_
+14:53:00,455 TRACE StringType:193 - returning 'Author 2' as column: first5_3_0_
+14:53:00,455 TRACE StringType:187 - returning null as column: last6_3_0_
+14:53:00,455 TRACE StringType:187 - returning null as column: phone3_0_
+14:53:00,455 TRACE StringType:187 - returning null as column: state3_0_
+14:53:00,455 TRACE StringType:187 - returning null as column: street3_0_
+14:53:00,456 TRACE StringType:187 - returning null as column: zip3_0_
+14:53:00,456 TRACE IntegerType:193 - returning '47' as column: book2_1_
+14:53:00,456 TRACE IntegerType:193 - returning '48' as column: author1_1_

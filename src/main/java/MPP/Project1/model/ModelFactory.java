@@ -15,10 +15,10 @@ public class ModelFactory {
 	}
 	
 	private static void setMap() {
-		map.put("controller.MemberController", new Member());
-		map.put("controller.LendController", new Lend());
-		map.put("controller.BookController", new Book());
-		map.put("controller.UserController", new User());
+		map.put("MPP.Project1.controller.BookController", new Member());
+		map.put("MPP.Project1.controller.LendController", new Lend());
+		map.put("MPP.Project1.controller.BookController", new Book());
+		map.put("MPP.Project1.controller.UserController", new User());
 	}
 	
 

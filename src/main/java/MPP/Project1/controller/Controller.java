@@ -54,6 +54,7 @@ public abstract class Controller<T> implements IController<T> {
 
 	@Override
 	public T find(int id) {
+		System.out.println(this.getClass().getName());
 		IModel model = ModelFactory.getModel(this.getClass().getName());
 		return (T) model.find(id);
 	}
