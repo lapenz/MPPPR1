@@ -1,13 +1,17 @@
 package MPP.Project1.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.Column;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 @Entity
 public class Author extends Model<Author> implements Serializable {
@@ -20,23 +24,19 @@ public class Author extends Model<Author> implements Serializable {
 
 	@Id @GeneratedValue
     private int id;
-	@Column
 	private String first_name;
-	@Column
 	private String last_name;
 	private String street;
-	@Column
 	private String city;
-	@Column
 	private String state;
-	@Column
 	private String zip;
-	@Column
 	private String phone;
-	@Column
 	private String credentials;
-	@Column
 	private String bio;
+	
+	@OneToMany( cascade = {CascadeType.ALL})
+	@LazyCollection(LazyCollectionOption.FALSE)
+	private List<Book> books = new ArrayList<Book>();
 	
 	
 	public String getFirst_name() {
@@ -98,6 +98,12 @@ public class Author extends Model<Author> implements Serializable {
 	public List<String> validate(Author obj) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	public List<Book> getBooks() {
+		return books;
+	}
+	public void setBooks(List<Book> books) {
+		this.books = books;
 	}
 
 
