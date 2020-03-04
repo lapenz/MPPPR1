@@ -4,8 +4,6 @@ import java.util.List;
 
 import org.hibernate.Query;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.AnnotationConfiguration;
 
 import MPP.Project1.HibernateUtil;
 
@@ -53,7 +51,17 @@ public abstract class Model<T> implements IModel<T> {
         
         T obj = (T) q.uniqueResult();
         
-//        session.close();
+        return obj;
+	}
+	
+	@Override
+	public T findFirst(String column, String value)  {
+		Session session = HibernateUtil.getSession();
+	    
+		Query q = session.createQuery("FROM "+ this.getClass().getName() + " where " + column + " = " + value);
+        
+        T obj = (T) q.uniqueResult();
+        
         
         return obj;
 	}
@@ -65,8 +73,6 @@ public abstract class Model<T> implements IModel<T> {
 		Query q = session.createQuery("FROM "+ this.getClass().getName());
         
         List<T> objs = q.list();
-        
-//        session.close();
         
         return objs;
         

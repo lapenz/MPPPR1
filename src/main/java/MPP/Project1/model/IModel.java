@@ -9,4 +9,6 @@ public interface IModel<T> {
 	List<T> findAll();
 	List<String> validate(T obj);
 	T find(int id);
+	T findFirst(String column, String value);
+
 }
