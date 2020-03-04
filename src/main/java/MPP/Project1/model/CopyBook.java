@@ -18,6 +18,10 @@ public class CopyBook extends Model<CopyBook> {
 	@ManyToOne
     private Book book;
 	
+	public CopyBook() {
+		
+	}
+	
 	public CopyBook(Book book) {
 		this.book = book;
 	}
