@@ -1,6 +1,7 @@
 package MPP.Project1.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -78,7 +79,15 @@ public class Member extends Model<Member> implements Serializable{
 	@Override
 	public List<String> validate() {
 		// TODO Auto-generated method stub
-		return null;
+		List<String> errorMessagesList = new ArrayList<String>();
+		if(this.first_name.isBlank()) {
+			errorMessagesList.add("First name can't be blank");
+		}
+		if(this.last_name.isBlank()) {
+			errorMessagesList.add("Last name can't be blank");
+		}
+		
+		return errorMessagesList;
 	}
 	@Override
 	public String toString() {

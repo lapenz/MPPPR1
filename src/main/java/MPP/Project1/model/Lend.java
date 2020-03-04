@@ -1,5 +1,6 @@
 package MPP.Project1.model;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -48,8 +49,11 @@ public class Lend extends Model<Lend> {
 	}
 	@Override
 	public List<String> validate() {
+		List<String> errorMessagesList = new ArrayList<String>();
 		// TODO Auto-generated method stub
-		return null;
+		if(this.member == null) errorMessagesList.add("Member is empty");
+		if(this.book == null) errorMessagesList.add("book is empty");
+		return errorMessagesList;
 	}
 
 	
