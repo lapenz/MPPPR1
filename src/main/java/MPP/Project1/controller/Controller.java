@@ -41,17 +41,28 @@ public abstract class Controller<T> implements IController<T> {
 		
 	}
 	
+	@Override
 	public void delete(IModel<T> obj) {
 		obj.delete();
 	};
 
+	@Override
 	public List<T> findAll() {
-		return null;
+		IModel model = ModelFactory.getModel(this.getClass().getName());
+		return model.findAll();
 	}
 
+	@Override
 	public T find(int id) {
-		// to do
-		return null;
+		IModel model = ModelFactory.getModel(this.getClass().getName());
+		return (T) model.find(id);
+	}
+	
+	@Override
+	public T findFirst(String column, String value) {
+		IModel model = ModelFactory.getModel(this.getClass().getName());
+		return (T) model.findFirst(column, value);
+
 	}
 
 }

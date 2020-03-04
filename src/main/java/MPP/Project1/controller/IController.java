@@ -1,6 +1,5 @@
 package MPP.Project1.controller;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 import MPP.Project1.model.IModel;
@@ -8,8 +7,9 @@ import MPP.Project1.model.IModel;
 public interface IController<T> {
 	List<String> save(IModel<T> obj);
 	List<String> update(IModel<T> obj);
-	IModel create() throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException;
+	IModel create();
 	List<T> findAll();
 	T find(int id);
+	T findFirst(String column, String value);
 	void delete(IModel<T> obj);
 }
