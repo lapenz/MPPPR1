@@ -106,6 +106,9 @@ public class Login {
 					}
 					else if(UserType.equals("3")) {
 						//both
+						BothView bv = new BothView(name);
+						bv.setVisible(true);
+						frame.setVisible(false);
 					}
 				}
 				catch (Exception ex )
