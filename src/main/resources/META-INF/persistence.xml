@@ -1,0 +1,35 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+
+    <persistence-unit name="default" transaction-type="RESOURCE_LOCAL">
+
+        <properties>
+           <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+           <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/mppproject1</property>
+           <property name="hibernate.connection.username">postgres</property>
+           <property name="hibernate.connection.password">postgres</property>
+
+	    	<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/> <!-- DB Dialect -->
+            <property name="hibernate.hbm2ddl.auto" value="update" /> <!-- create / create-drop / update -->
+            
+            <property name="hibernate.show_sql" value="true" /> <!-- Show SQL in console -->
+            <property name="hibernate.format_sql" value="true" /> <!-- Show SQL formatted -->
+            
+            <class>MPP.Project1.model.Author</class>
+		    <class>MPP.Project1.model.Member</class>
+		    <class>MPP.Project1.model.Book</class>
+		    <class>MPP.Project1.model.CopyBook</class>
+		    <class>MPP.Project1.model.User</class>
+		    <class>MPP.Project1.model.Lend</class>
+		
+		
+        </properties>
+
+
+		
+    </persistence-unit>
+
+</persistence>
