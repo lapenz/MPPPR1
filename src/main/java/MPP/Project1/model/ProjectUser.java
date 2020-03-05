@@ -8,7 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class User extends Model<User> implements Serializable {
+public class ProjectUser extends Model<ProjectUser> implements Serializable {
 	
 
 	/**

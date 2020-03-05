@@ -8056,3 +8056,576 @@ java.lang.UnsupportedOperationException: The user must supply a JDBC connection
 18:16:35,447 TRACE IntegerType:193 - returning '333333333' as column: number2_1_
 18:16:35,448 TRACE IntegerType:193 - returning '53' as column: copyBooks5_2_
 18:16:35,448 TRACE IntegerType:193 - returning '55' as column: id2_
+18:33:53,022  INFO Version:15 - Hibernate Annotations 3.4.0.GA
+18:33:53,041  INFO Environment:543 - Hibernate 3.3.0.SP1
+18:33:53,045  INFO Environment:576 - hibernate.properties not found
+18:33:53,049  INFO Environment:709 - Bytecode provider name : javassist
+18:33:53,055  INFO Environment:627 - using JDK 1.4 java.sql.Timestamp handling
+18:33:53,124  INFO Version:14 - Hibernate Commons Annotations 3.1.0.GA
+18:33:53,127  INFO Version:16 - Hibernate EntityManager 3.4.0.GA
+18:33:53,635  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Author
+18:33:53,656  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Author on table Author
+18:33:53,712  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Book
+18:33:53,712  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Book on table Book
+18:33:53,716  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.CopyBook
+18:33:53,717  INFO EntityBinder:422 - Bind entity MPP.Project1.model.CopyBook on table CopyBook
+18:33:53,720  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.User
+18:33:53,721  INFO EntityBinder:422 - Bind entity MPP.Project1.model.User on table User
+18:33:53,722  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Member
+18:33:53,722  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Member on table Member
+18:33:53,757  INFO CollectionBinder:650 - Mapping collection: MPP.Project1.model.Book.copyBooks -> CopyBook
+18:33:53,760  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+18:33:53,782  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+18:33:53,786  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+18:33:53,787  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+18:33:53,787  INFO DriverManagerConnectionProvider:68 - autocommit mode: true
+18:33:53,800  INFO DriverManagerConnectionProvider:103 - using driver: org.postgresql.Driver at URL: jdbc:postgresql://localhost:5432/mppproject1
+18:33:53,801  INFO DriverManagerConnectionProvider:109 - connection properties: {password=****, autocommit=true, release_mode=auto, user=postgres}
+18:33:53,920  INFO SettingsFactory:116 - RDBMS: PostgreSQL, version: 12.2
+18:33:53,921  INFO SettingsFactory:117 - JDBC driver: PostgreSQL JDBC Driver, version: 42.2.2.jre7
+18:33:53,930  INFO Dialect:175 - Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18:33:53,934  INFO TransactionFactoryFactory:62 - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+18:33:53,935  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+18:33:53,935  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+18:33:53,935  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+18:33:53,935  INFO SettingsFactory:181 - JDBC batch size: 15
+18:33:53,936  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+18:33:53,936  INFO SettingsFactory:189 - Scrollable result sets: enabled
+18:33:53,936  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): enabled
+18:33:53,936  INFO SettingsFactory:205 - Connection release mode: auto
+18:33:53,937  INFO SettingsFactory:232 - Default batch fetch size: 1
+18:33:53,937  INFO SettingsFactory:236 - Generate SQL with comments: disabled
+18:33:53,937  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+18:33:53,938  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+18:33:53,938  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+18:33:53,939  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+18:33:53,939  INFO SettingsFactory:252 - Query language substitutions: {}
+18:33:53,939  INFO SettingsFactory:257 - JPA-QL strict compliance: enabled
+18:33:53,939  INFO SettingsFactory:262 - Second-level cache: enabled
+18:33:53,939  INFO SettingsFactory:266 - Query cache: disabled
+18:33:53,940  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+18:33:53,940  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+18:33:53,940  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+18:33:53,942  INFO SettingsFactory:305 - Echoing all SQL to stdout
+18:33:53,943  INFO SettingsFactory:314 - Statistics: disabled
+18:33:53,943  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+18:33:53,943  INFO SettingsFactory:333 - Default entity-mode: pojo
+18:33:53,944  INFO SettingsFactory:337 - Named query checking : enabled
+18:33:53,963  INFO SessionFactoryImpl:187 - building session factory
+18:33:54,119  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+18:33:54,121  INFO SchemaUpdate:138 - Running hbm2ddl schema update
+18:33:54,121  INFO SchemaUpdate:149 - fetching database metadata
+18:33:54,131  INFO SchemaUpdate:161 - updating schema
+18:33:54,166  INFO TableMetadata:62 - table found: public.author
+18:33:54,166  INFO TableMetadata:63 - columns: [zip, city, credentials, phone, street, bio, last_name, id, state, first_name]
+18:33:54,166  INFO TableMetadata:65 - foreign keys: []
+18:33:54,167  INFO TableMetadata:66 - indexes: [author_pkey]
+18:33:54,195  INFO TableMetadata:62 - table found: public.book
+18:33:54,196  INFO TableMetadata:63 - columns: [isbn, id, title]
+18:33:54,197  INFO TableMetadata:65 - foreign keys: []
+18:33:54,198  INFO TableMetadata:66 - indexes: [book_pkey]
+18:33:54,219  INFO TableMetadata:62 - table found: public.copybook
+18:33:54,220  INFO TableMetadata:63 - columns: [number, copybooks_id, id, availability, book_id]
+18:33:54,220  INFO TableMetadata:65 - foreign keys: [fke5aa001ea136e2e8, fke5aa001eb03103d4]
+18:33:54,221  INFO TableMetadata:66 - indexes: [copybook_pkey]
+18:33:54,241  INFO TableMetadata:62 - table found: public.member
+18:33:54,241  INFO TableMetadata:63 - columns: [zip, city, phone, street, last_name, id, state, first_name]
+18:33:54,241  INFO TableMetadata:65 - foreign keys: []
+18:33:54,242  INFO TableMetadata:66 - indexes: [member_pkey]
+18:33:54,243  INFO DatabaseMetadata:119 - table not found: User
+18:33:54,256  INFO TableMetadata:62 - table found: public.book_author
+18:33:54,256  INFO TableMetadata:63 - columns: [book_id, author_id]
+18:33:54,256  INFO TableMetadata:65 - foreign keys: [fkedcb7ba145ea2214, fkedcb7ba1b03103d4]
+18:33:54,256  INFO TableMetadata:66 - indexes: []
+18:33:54,257  INFO DatabaseMetadata:119 - table not found: User
+18:33:54,266 ERROR SchemaUpdate:178 - Unsuccessful: create table User (id int4 not null, login varchar(255), password varchar(255), type varchar(255), primary key (id))
+18:33:54,266 ERROR SchemaUpdate:179 - ERROR: syntax error at or near "User"
+  Position: 14
+18:33:54,266  INFO SchemaUpdate:183 - schema update complete
+18:33:54,385 TRACE IntegerType:193 - returning '53' as column: id1_
+18:33:54,387 TRACE StringType:193 - returning '63636363636363666' as column: isbn1_
+18:33:54,388 TRACE StringType:193 - returning 'Livro podre' as column: title1_
+18:33:54,394 TRACE IntegerType:151 - binding '53' to parameter: 1
+18:33:54,396 TRACE IntegerType:193 - returning '53' as column: id1_0_
+18:33:54,396 TRACE IntegerType:193 - returning '55' as column: id2_1_
+18:33:54,397 TRACE BooleanType:193 - returning 'true' as column: availabi2_2_1_
+18:33:54,397 TRACE IntegerType:193 - returning '53' as column: book4_2_1_
+18:33:54,397 TRACE IntegerType:193 - returning '333333333' as column: number2_1_
+18:33:54,397 TRACE IntegerType:193 - returning '53' as column: copyBooks5_2_
+18:33:54,397 TRACE IntegerType:193 - returning '55' as column: id2_
+18:33:54,407 TRACE StringType:151 - binding 'sdf' to parameter: 1
+18:33:54,407 TRACE StringType:151 - binding 'sdf' to parameter: 2
+18:33:54,407 TRACE StringType:151 - binding 'sdfd' to parameter: 3
+18:33:54,407 TRACE IntegerType:151 - binding '56' to parameter: 4
+18:33:54,410  WARN JDBCExceptionReporter:100 - SQL Error: 0, SQLState: 42601
+18:33:54,410 ERROR JDBCExceptionReporter:101 - Batch entry 0 insert into User (login, password, type, id) values ('sdf', 'sdf', 'sdfd', 56) was aborted: ERROR: syntax error at or near "User"
+  Position: 13  Call getNextException to see other errors in the batch.
+18:33:54,410  WARN JDBCExceptionReporter:100 - SQL Error: 0, SQLState: 42601
+18:33:54,411 ERROR JDBCExceptionReporter:101 - ERROR: syntax error at or near "User"
+  Position: 13
+18:33:54,412 ERROR AbstractFlushingEventListener:324 - Could not synchronize database state with session
+org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:90)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:275)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:266)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:167)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1027)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:365)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at org.hibernate.ejb.TransactionImpl.commit(TransactionImpl.java:54)
+	at MPP.Project1.model.Model.save(Model.java:17)
+	at MPP.Project1.App.main(App.java:53)
+Caused by: java.sql.BatchUpdateException: Batch entry 0 insert into User (login, password, type, id) values ('sdf', 'sdf', 'sdfd', 56) was aborted: ERROR: syntax error at or near "User"
+  Position: 13  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:145)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2179)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:479)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:835)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1556)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	... 10 more
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "User"
+  Position: 13
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+	... 15 more
+18:39:26,375  INFO Version:15 - Hibernate Annotations 3.4.0.GA
+18:39:26,395  INFO Environment:543 - Hibernate 3.3.0.SP1
+18:39:26,401  INFO Environment:576 - hibernate.properties not found
+18:39:26,406  INFO Environment:709 - Bytecode provider name : javassist
+18:39:26,414  INFO Environment:627 - using JDK 1.4 java.sql.Timestamp handling
+18:39:26,472  INFO Version:14 - Hibernate Commons Annotations 3.1.0.GA
+18:39:26,475  INFO Version:16 - Hibernate EntityManager 3.4.0.GA
+18:39:27,148  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Author
+18:39:27,170  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Author on table Author
+18:39:27,273  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Book
+18:39:27,275  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Book on table Book
+18:39:27,283  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.CopyBook
+18:39:27,284  INFO EntityBinder:422 - Bind entity MPP.Project1.model.CopyBook on table CopyBook
+18:39:27,294  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.User
+18:39:27,295  INFO EntityBinder:422 - Bind entity MPP.Project1.model.User on table User
+18:39:27,298  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Member
+18:39:27,299  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Member on table Member
+18:39:27,381  INFO CollectionBinder:650 - Mapping collection: MPP.Project1.model.Book.copyBooks -> CopyBook
+18:39:27,385  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+18:39:27,440  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+18:39:27,451  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+18:39:27,451  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+18:39:27,452  INFO DriverManagerConnectionProvider:68 - autocommit mode: true
+18:39:27,477  INFO DriverManagerConnectionProvider:103 - using driver: org.postgresql.Driver at URL: jdbc:postgresql://localhost:5432/mppproject1
+18:39:27,478  INFO DriverManagerConnectionProvider:109 - connection properties: {password=****, autocommit=true, release_mode=auto, user=postgres}
+18:39:27,648  INFO SettingsFactory:116 - RDBMS: PostgreSQL, version: 12.2
+18:39:27,648  INFO SettingsFactory:117 - JDBC driver: PostgreSQL JDBC Driver, version: 42.2.2.jre7
+18:39:27,671  INFO Dialect:175 - Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18:39:27,678  INFO TransactionFactoryFactory:62 - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+18:39:27,680  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+18:39:27,680  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+18:39:27,681  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+18:39:27,681  INFO SettingsFactory:181 - JDBC batch size: 15
+18:39:27,681  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+18:39:27,682  INFO SettingsFactory:189 - Scrollable result sets: enabled
+18:39:27,682  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): enabled
+18:39:27,683  INFO SettingsFactory:205 - Connection release mode: auto
+18:39:27,684  INFO SettingsFactory:232 - Default batch fetch size: 1
+18:39:27,684  INFO SettingsFactory:236 - Generate SQL with comments: disabled
+18:39:27,685  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+18:39:27,685  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+18:39:27,686  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+18:39:27,687  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+18:39:27,688  INFO SettingsFactory:252 - Query language substitutions: {}
+18:39:27,688  INFO SettingsFactory:257 - JPA-QL strict compliance: enabled
+18:39:27,689  INFO SettingsFactory:262 - Second-level cache: enabled
+18:39:27,689  INFO SettingsFactory:266 - Query cache: disabled
+18:39:27,689  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+18:39:27,690  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+18:39:27,690  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+18:39:27,695  INFO SettingsFactory:305 - Echoing all SQL to stdout
+18:39:27,696  INFO SettingsFactory:314 - Statistics: disabled
+18:39:27,696  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+18:39:27,697  INFO SettingsFactory:333 - Default entity-mode: pojo
+18:39:27,697  INFO SettingsFactory:337 - Named query checking : enabled
+18:39:27,744  INFO SessionFactoryImpl:187 - building session factory
+18:39:28,051  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+18:39:28,062  INFO SchemaExport:226 - Running hbm2ddl schema export
+18:39:28,063  INFO SchemaExport:251 - exporting generated schema to database
+18:39:28,153 ERROR SchemaExport:348 - Unsuccessful: create table User (id int4 not null, login varchar(255), password varchar(255), type varchar(255), primary key (id))
+18:39:28,154 ERROR SchemaExport:349 - ERROR: syntax error at or near "User"
+  Position: 14
+18:39:28,174  INFO SchemaExport:268 - schema export complete
+18:39:59,933  INFO Version:15 - Hibernate Annotations 3.4.0.GA
+18:39:59,964  INFO Environment:543 - Hibernate 3.3.0.SP1
+18:39:59,970  INFO Environment:576 - hibernate.properties not found
+18:39:59,985  INFO Environment:709 - Bytecode provider name : javassist
+18:40:00,032  INFO Environment:627 - using JDK 1.4 java.sql.Timestamp handling
+18:40:00,177  INFO Version:14 - Hibernate Commons Annotations 3.1.0.GA
+18:40:00,181  INFO Version:16 - Hibernate EntityManager 3.4.0.GA
+18:40:01,262  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Author
+18:40:01,342  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Author on table Author
+18:40:01,497  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Book
+18:40:01,498  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Book on table Book
+18:40:01,509  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.CopyBook
+18:40:01,511  INFO EntityBinder:422 - Bind entity MPP.Project1.model.CopyBook on table CopyBook
+18:40:01,520  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.User
+18:40:01,521  INFO EntityBinder:422 - Bind entity MPP.Project1.model.User on table User
+18:40:01,525  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Member
+18:40:01,526  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Member on table Member
+18:40:01,620  INFO CollectionBinder:650 - Mapping collection: MPP.Project1.model.Book.copyBooks -> CopyBook
+18:40:01,624  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+18:40:01,685  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+18:40:01,706  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+18:40:01,707  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+18:40:01,708  INFO DriverManagerConnectionProvider:68 - autocommit mode: true
+18:40:01,741  INFO DriverManagerConnectionProvider:103 - using driver: org.postgresql.Driver at URL: jdbc:postgresql://localhost:5432/mppproject1
+18:40:01,742  INFO DriverManagerConnectionProvider:109 - connection properties: {password=****, autocommit=true, release_mode=auto, user=postgres}
+18:40:01,907  INFO SettingsFactory:116 - RDBMS: PostgreSQL, version: 12.2
+18:40:01,908  INFO SettingsFactory:117 - JDBC driver: PostgreSQL JDBC Driver, version: 42.2.2.jre7
+18:40:01,924  INFO Dialect:175 - Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18:40:01,929  INFO TransactionFactoryFactory:62 - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+18:40:01,931  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+18:40:01,932  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+18:40:01,932  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+18:40:01,932  INFO SettingsFactory:181 - JDBC batch size: 15
+18:40:01,933  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+18:40:01,934  INFO SettingsFactory:189 - Scrollable result sets: enabled
+18:40:01,935  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): enabled
+18:40:01,935  INFO SettingsFactory:205 - Connection release mode: auto
+18:40:01,936  INFO SettingsFactory:232 - Default batch fetch size: 1
+18:40:01,936  INFO SettingsFactory:236 - Generate SQL with comments: disabled
+18:40:01,937  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+18:40:01,937  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+18:40:01,938  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+18:40:01,939  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+18:40:01,940  INFO SettingsFactory:252 - Query language substitutions: {}
+18:40:01,940  INFO SettingsFactory:257 - JPA-QL strict compliance: enabled
+18:40:01,941  INFO SettingsFactory:262 - Second-level cache: enabled
+18:40:01,941  INFO SettingsFactory:266 - Query cache: disabled
+18:40:01,941  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+18:40:01,942  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+18:40:01,942  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+18:40:01,947  INFO SettingsFactory:305 - Echoing all SQL to stdout
+18:40:01,948  INFO SettingsFactory:314 - Statistics: disabled
+18:40:01,948  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+18:40:01,949  INFO SettingsFactory:333 - Default entity-mode: pojo
+18:40:01,950  INFO SettingsFactory:337 - Named query checking : enabled
+18:40:02,004  INFO SessionFactoryImpl:187 - building session factory
+18:40:02,298  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+18:40:02,313  INFO SchemaExport:226 - Running hbm2ddl schema export
+18:40:02,315  INFO SchemaExport:251 - exporting generated schema to database
+18:40:02,386 ERROR SchemaExport:348 - Unsuccessful: create table User (id int4 not null, login varchar(255), password varchar(255), type varchar(255), primary key (id))
+18:40:02,387 ERROR SchemaExport:349 - ERROR: syntax error at or near "User"
+  Position: 14
+18:40:02,416  INFO SchemaExport:268 - schema export complete
+18:40:02,517 TRACE StringType:151 - binding 'sdf' to parameter: 1
+18:40:02,518 TRACE StringType:151 - binding 'sdf' to parameter: 2
+18:40:02,518 TRACE StringType:151 - binding 'sdfd' to parameter: 3
+18:40:02,519 TRACE IntegerType:151 - binding '1' to parameter: 4
+18:40:02,532  WARN JDBCExceptionReporter:100 - SQL Error: 0, SQLState: 42601
+18:40:02,533 ERROR JDBCExceptionReporter:101 - Batch entry 0 insert into User (login, password, type, id) values ('sdf', 'sdf', 'sdfd', 1) was aborted: ERROR: syntax error at or near "User"
+  Position: 13  Call getNextException to see other errors in the batch.
+18:40:02,533  WARN JDBCExceptionReporter:100 - SQL Error: 0, SQLState: 42601
+18:40:02,534 ERROR JDBCExceptionReporter:101 - ERROR: syntax error at or near "User"
+  Position: 13
+18:40:02,536 ERROR AbstractFlushingEventListener:324 - Could not synchronize database state with session
+org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:90)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:275)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:266)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:167)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1027)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:365)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at org.hibernate.ejb.TransactionImpl.commit(TransactionImpl.java:54)
+	at MPP.Project1.model.Model.save(Model.java:17)
+	at MPP.Project1.App.main(App.java:53)
+Caused by: java.sql.BatchUpdateException: Batch entry 0 insert into User (login, password, type, id) values ('sdf', 'sdf', 'sdfd', 1) was aborted: ERROR: syntax error at or near "User"
+  Position: 13  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:145)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2179)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:479)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:835)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1556)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	... 10 more
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "User"
+  Position: 13
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+	... 15 more
+18:40:42,475  INFO Version:15 - Hibernate Annotations 3.4.0.GA
+18:40:42,497  INFO Environment:543 - Hibernate 3.3.0.SP1
+18:40:42,504  INFO Environment:576 - hibernate.properties not found
+18:40:42,509  INFO Environment:709 - Bytecode provider name : javassist
+18:40:42,519  INFO Environment:627 - using JDK 1.4 java.sql.Timestamp handling
+18:40:42,595  INFO Version:14 - Hibernate Commons Annotations 3.1.0.GA
+18:40:42,604  INFO Version:16 - Hibernate EntityManager 3.4.0.GA
+18:40:43,337  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Author
+18:40:43,377  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Author on table Author
+18:40:43,504  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Book
+18:40:43,505  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Book on table Book
+18:40:43,513  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.CopyBook
+18:40:43,514  INFO EntityBinder:422 - Bind entity MPP.Project1.model.CopyBook on table CopyBook
+18:40:43,520  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.User
+18:40:43,521  INFO EntityBinder:422 - Bind entity MPP.Project1.model.User on table User
+18:40:43,524  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Member
+18:40:43,524  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Member on table Member
+18:40:43,598  INFO CollectionBinder:650 - Mapping collection: MPP.Project1.model.Book.copyBooks -> CopyBook
+18:40:43,602  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+18:40:43,654  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+18:40:43,666  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+18:40:43,666  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+18:40:43,667  INFO DriverManagerConnectionProvider:68 - autocommit mode: true
+18:40:43,693  INFO DriverManagerConnectionProvider:103 - using driver: org.postgresql.Driver at URL: jdbc:postgresql://localhost:5432/mppproject1
+18:40:43,693  INFO DriverManagerConnectionProvider:109 - connection properties: {password=****, autocommit=true, release_mode=auto, user=postgres}
+18:40:43,858  INFO SettingsFactory:116 - RDBMS: PostgreSQL, version: 12.2
+18:40:43,858  INFO SettingsFactory:117 - JDBC driver: PostgreSQL JDBC Driver, version: 42.2.2.jre7
+18:40:43,874  INFO Dialect:175 - Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18:40:43,881  INFO TransactionFactoryFactory:62 - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+18:40:43,883  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+18:40:43,883  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+18:40:43,884  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+18:40:43,884  INFO SettingsFactory:181 - JDBC batch size: 15
+18:40:43,884  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+18:40:43,885  INFO SettingsFactory:189 - Scrollable result sets: enabled
+18:40:43,886  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): enabled
+18:40:43,886  INFO SettingsFactory:205 - Connection release mode: auto
+18:40:43,887  INFO SettingsFactory:232 - Default batch fetch size: 1
+18:40:43,888  INFO SettingsFactory:236 - Generate SQL with comments: disabled
+18:40:43,888  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+18:40:43,889  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+18:40:43,890  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+18:40:43,892  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+18:40:43,893  INFO SettingsFactory:252 - Query language substitutions: {}
+18:40:43,893  INFO SettingsFactory:257 - JPA-QL strict compliance: enabled
+18:40:43,894  INFO SettingsFactory:262 - Second-level cache: enabled
+18:40:43,894  INFO SettingsFactory:266 - Query cache: disabled
+18:40:43,895  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+18:40:43,895  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+18:40:43,896  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+18:40:43,900  INFO SettingsFactory:305 - Echoing all SQL to stdout
+18:40:43,901  INFO SettingsFactory:314 - Statistics: disabled
+18:40:43,901  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+18:40:43,902  INFO SettingsFactory:333 - Default entity-mode: pojo
+18:40:43,902  INFO SettingsFactory:337 - Named query checking : enabled
+18:40:44,159  INFO SessionFactoryImpl:187 - building session factory
+18:40:44,445  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+18:40:44,455  INFO SchemaExport:226 - Running hbm2ddl schema export
+18:40:44,456  INFO SchemaExport:251 - exporting generated schema to database
+18:40:44,535 ERROR SchemaExport:348 - Unsuccessful: create table User (id int4 not null, login varchar(255), password varchar(255), type varchar(255), primary key (id))
+18:40:44,536 ERROR SchemaExport:349 - ERROR: syntax error at or near "User"
+  Position: 14
+18:40:44,550  INFO SchemaExport:268 - schema export complete
+18:40:44,660 TRACE StringType:151 - binding 'sdf' to parameter: 1
+18:40:44,660 TRACE StringType:151 - binding 'sdf' to parameter: 2
+18:40:44,661 TRACE StringType:151 - binding 'sdfd' to parameter: 3
+18:40:44,662 TRACE IntegerType:151 - binding '1' to parameter: 4
+18:40:44,678  WARN JDBCExceptionReporter:100 - SQL Error: 0, SQLState: 42601
+18:40:44,678 ERROR JDBCExceptionReporter:101 - Batch entry 0 insert into User (login, password, type, id) values ('sdf', 'sdf', 'sdfd', 1) was aborted: ERROR: syntax error at or near "User"
+  Position: 13  Call getNextException to see other errors in the batch.
+18:40:44,680  WARN JDBCExceptionReporter:100 - SQL Error: 0, SQLState: 42601
+18:40:44,681 ERROR JDBCExceptionReporter:101 - ERROR: syntax error at or near "User"
+  Position: 13
+18:40:44,684 ERROR AbstractFlushingEventListener:324 - Could not synchronize database state with session
+org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:90)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:275)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:266)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:167)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1027)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:365)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at org.hibernate.ejb.TransactionImpl.commit(TransactionImpl.java:54)
+	at MPP.Project1.model.Model.save(Model.java:17)
+	at MPP.Project1.App.main(App.java:53)
+Caused by: java.sql.BatchUpdateException: Batch entry 0 insert into User (login, password, type, id) values ('sdf', 'sdf', 'sdfd', 1) was aborted: ERROR: syntax error at or near "User"
+  Position: 13  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:145)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2179)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:479)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:835)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1556)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	... 10 more
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "User"
+  Position: 13
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+	... 15 more
+18:41:03,702  INFO Version:15 - Hibernate Annotations 3.4.0.GA
+18:41:03,726  INFO Environment:543 - Hibernate 3.3.0.SP1
+18:41:03,732  INFO Environment:576 - hibernate.properties not found
+18:41:03,737  INFO Environment:709 - Bytecode provider name : javassist
+18:41:03,747  INFO Environment:627 - using JDK 1.4 java.sql.Timestamp handling
+18:41:03,863  INFO Version:14 - Hibernate Commons Annotations 3.1.0.GA
+18:41:03,867  INFO Version:16 - Hibernate EntityManager 3.4.0.GA
+18:41:04,536  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Author
+18:41:04,577  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Author on table Author
+18:41:04,704  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Book
+18:41:04,705  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Book on table Book
+18:41:04,713  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.CopyBook
+18:41:04,714  INFO EntityBinder:422 - Bind entity MPP.Project1.model.CopyBook on table CopyBook
+18:41:04,722  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.User
+18:41:04,723  INFO EntityBinder:422 - Bind entity MPP.Project1.model.User on table User
+18:41:04,727  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Member
+18:41:04,728  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Member on table Member
+18:41:04,811  INFO CollectionBinder:650 - Mapping collection: MPP.Project1.model.Book.copyBooks -> CopyBook
+18:41:04,816  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+18:41:04,871  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+18:41:04,888  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+18:41:04,889  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+18:41:04,889  INFO DriverManagerConnectionProvider:68 - autocommit mode: true
+18:41:04,918  INFO DriverManagerConnectionProvider:103 - using driver: org.postgresql.Driver at URL: jdbc:postgresql://localhost:5432/mppproject1
+18:41:04,918  INFO DriverManagerConnectionProvider:109 - connection properties: {password=****, autocommit=true, release_mode=auto, user=postgres}
+18:41:05,085  INFO SettingsFactory:116 - RDBMS: PostgreSQL, version: 12.2
+18:41:05,085  INFO SettingsFactory:117 - JDBC driver: PostgreSQL JDBC Driver, version: 42.2.2.jre7
+18:41:05,101  INFO Dialect:175 - Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18:41:05,106  INFO TransactionFactoryFactory:62 - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+18:41:05,108  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+18:41:05,109  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+18:41:05,109  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+18:41:05,109  INFO SettingsFactory:181 - JDBC batch size: 15
+18:41:05,110  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+18:41:05,110  INFO SettingsFactory:189 - Scrollable result sets: enabled
+18:41:05,111  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): enabled
+18:41:05,111  INFO SettingsFactory:205 - Connection release mode: auto
+18:41:05,113  INFO SettingsFactory:232 - Default batch fetch size: 1
+18:41:05,114  INFO SettingsFactory:236 - Generate SQL with comments: disabled
+18:41:05,115  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+18:41:05,115  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+18:41:05,116  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+18:41:05,118  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+18:41:05,119  INFO SettingsFactory:252 - Query language substitutions: {}
+18:41:05,119  INFO SettingsFactory:257 - JPA-QL strict compliance: enabled
+18:41:05,119  INFO SettingsFactory:262 - Second-level cache: enabled
+18:41:05,120  INFO SettingsFactory:266 - Query cache: disabled
+18:41:05,120  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+18:41:05,120  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+18:41:05,121  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+18:41:05,126  INFO SettingsFactory:305 - Echoing all SQL to stdout
+18:41:05,127  INFO SettingsFactory:314 - Statistics: disabled
+18:41:05,128  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+18:41:05,129  INFO SettingsFactory:333 - Default entity-mode: pojo
+18:41:05,129  INFO SettingsFactory:337 - Named query checking : enabled
+18:41:05,177  INFO SessionFactoryImpl:187 - building session factory
+18:41:05,499  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+18:41:05,516  INFO SchemaExport:226 - Running hbm2ddl schema export
+18:41:05,517  INFO SchemaExport:251 - exporting generated schema to database
+18:41:05,605 ERROR SchemaExport:348 - Unsuccessful: create table User (id int4 not null, login varchar(255), password varchar(255), type varchar(255), primary key (id))
+18:41:05,605 ERROR SchemaExport:349 - ERROR: syntax error at or near "User"
+  Position: 14
+18:41:05,623  INFO SchemaExport:268 - schema export complete
+18:41:05,738 TRACE StringType:151 - binding 'sdf' to parameter: 1
+18:41:05,739 TRACE StringType:151 - binding 'sdf' to parameter: 2
+18:41:05,739 TRACE StringType:151 - binding 'sdfd' to parameter: 3
+18:41:05,740 TRACE IntegerType:151 - binding '1' to parameter: 4
+18:41:05,751  WARN JDBCExceptionReporter:100 - SQL Error: 0, SQLState: 42601
+18:41:05,752 ERROR JDBCExceptionReporter:101 - Batch entry 0 insert into User (login, password, type, id) values ('sdf', 'sdf', 'sdfd', 1) was aborted: ERROR: syntax error at or near "User"
+  Position: 13  Call getNextException to see other errors in the batch.
+18:41:05,752  WARN JDBCExceptionReporter:100 - SQL Error: 0, SQLState: 42601
+18:41:05,753 ERROR JDBCExceptionReporter:101 - ERROR: syntax error at or near "User"
+  Position: 13
+18:41:05,755 ERROR AbstractFlushingEventListener:324 - Could not synchronize database state with session
+org.hibernate.exception.SQLGrammarException: Could not execute JDBC batch update
+	at org.hibernate.exception.SQLStateConverter.convert(SQLStateConverter.java:90)
+	at org.hibernate.exception.JDBCExceptionHelper.convert(JDBCExceptionHelper.java:66)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:275)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:266)
+	at org.hibernate.engine.ActionQueue.executeActions(ActionQueue.java:167)
+	at org.hibernate.event.def.AbstractFlushingEventListener.performExecutions(AbstractFlushingEventListener.java:321)
+	at org.hibernate.event.def.DefaultFlushEventListener.onFlush(DefaultFlushEventListener.java:50)
+	at org.hibernate.impl.SessionImpl.flush(SessionImpl.java:1027)
+	at org.hibernate.impl.SessionImpl.managedFlush(SessionImpl.java:365)
+	at org.hibernate.transaction.JDBCTransaction.commit(JDBCTransaction.java:137)
+	at org.hibernate.ejb.TransactionImpl.commit(TransactionImpl.java:54)
+	at MPP.Project1.model.Model.save(Model.java:17)
+	at MPP.Project1.App.main(App.java:53)
+Caused by: java.sql.BatchUpdateException: Batch entry 0 insert into User (login, password, type, id) values ('sdf', 'sdf', 'sdfd', 1) was aborted: ERROR: syntax error at or near "User"
+  Position: 13  Call getNextException to see other errors in the batch.
+	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:145)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2179)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:479)
+	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:835)
+	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1556)
+	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
+	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
+	... 10 more
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "User"
+  Position: 13
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+	... 15 more
+18:47:19,402  INFO Version:15 - Hibernate Annotations 3.4.0.GA
+18:47:19,461  INFO Environment:543 - Hibernate 3.3.0.SP1
+18:47:19,532  INFO Environment:576 - hibernate.properties not found
+18:47:19,598  INFO Environment:709 - Bytecode provider name : javassist
+18:47:19,622  INFO Environment:627 - using JDK 1.4 java.sql.Timestamp handling
+18:47:19,892  INFO Version:14 - Hibernate Commons Annotations 3.1.0.GA
+18:47:19,904  INFO Version:16 - Hibernate EntityManager 3.4.0.GA
+18:47:21,134  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Author
+18:47:21,182  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Author on table Author
+18:47:21,392  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Book
+18:47:21,394  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Book on table Book
+18:47:21,405  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.ProjectUser
+18:47:21,406  INFO EntityBinder:422 - Bind entity MPP.Project1.model.ProjectUser on table ProjectUser
+18:47:21,408  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.CopyBook
+18:47:21,409  INFO EntityBinder:422 - Bind entity MPP.Project1.model.CopyBook on table CopyBook
+18:47:21,416  INFO AnnotationBinder:419 - Binding entity from annotated class: MPP.Project1.model.Member
+18:47:21,418  INFO EntityBinder:422 - Bind entity MPP.Project1.model.Member on table Member
+18:47:21,628  INFO CollectionBinder:650 - Mapping collection: MPP.Project1.model.Book.copyBooks -> CopyBook
+18:47:21,632  INFO AnnotationConfiguration:369 - Hibernate Validator not found: ignoring
+18:47:21,665  INFO HibernateSearchEventListenerRegister:53 - Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+18:47:21,674  INFO DriverManagerConnectionProvider:64 - Using Hibernate built-in connection pool (not for production use!)
+18:47:21,675  INFO DriverManagerConnectionProvider:65 - Hibernate connection pool size: 20
+18:47:21,675  INFO DriverManagerConnectionProvider:68 - autocommit mode: true
+18:47:21,732  INFO DriverManagerConnectionProvider:103 - using driver: org.postgresql.Driver at URL: jdbc:postgresql://localhost:5432/mppproject1
+18:47:21,736  INFO DriverManagerConnectionProvider:109 - connection properties: {password=****, autocommit=true, release_mode=auto, user=postgres}
+18:47:22,115  INFO SettingsFactory:116 - RDBMS: PostgreSQL, version: 12.2
+18:47:22,118  INFO SettingsFactory:117 - JDBC driver: PostgreSQL JDBC Driver, version: 42.2.2.jre7
+18:47:22,156  INFO Dialect:175 - Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18:47:22,168  INFO TransactionFactoryFactory:62 - Transaction strategy: org.hibernate.transaction.JDBCTransactionFactory
+18:47:22,172  INFO TransactionManagerLookupFactory:80 - No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+18:47:22,176  INFO SettingsFactory:170 - Automatic flush during beforeCompletion(): disabled
+18:47:22,179  INFO SettingsFactory:174 - Automatic session close at end of transaction: disabled
+18:47:22,184  INFO SettingsFactory:181 - JDBC batch size: 15
+18:47:22,189  INFO SettingsFactory:184 - JDBC batch updates for versioned data: disabled
+18:47:22,192  INFO SettingsFactory:189 - Scrollable result sets: enabled
+18:47:22,194  INFO SettingsFactory:197 - JDBC3 getGeneratedKeys(): enabled
+18:47:22,195  INFO SettingsFactory:205 - Connection release mode: auto
+18:47:22,197  INFO SettingsFactory:232 - Default batch fetch size: 1
+18:47:22,198  INFO SettingsFactory:236 - Generate SQL with comments: disabled
+18:47:22,199  INFO SettingsFactory:240 - Order SQL updates by primary key: disabled
+18:47:22,200  INFO SettingsFactory:244 - Order SQL inserts for batching: disabled
+18:47:22,201  INFO SettingsFactory:420 - Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+18:47:22,208  INFO ASTQueryTranslatorFactory:47 - Using ASTQueryTranslatorFactory
+18:47:22,209  INFO SettingsFactory:252 - Query language substitutions: {}
+18:47:22,210  INFO SettingsFactory:257 - JPA-QL strict compliance: enabled
+18:47:22,210  INFO SettingsFactory:262 - Second-level cache: enabled
+18:47:22,211  INFO SettingsFactory:266 - Query cache: disabled
+18:47:22,212  INFO SettingsFactory:405 - Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+18:47:22,213  INFO SettingsFactory:276 - Optimize cache for minimal puts: disabled
+18:47:22,213  INFO SettingsFactory:285 - Structured second-level cache entries: disabled
+18:47:22,221  INFO SettingsFactory:305 - Echoing all SQL to stdout
+18:47:22,240  INFO SettingsFactory:314 - Statistics: disabled
+18:47:22,241  INFO SettingsFactory:318 - Deleted entity synthetic identifier rollback: disabled
+18:47:22,243  INFO SettingsFactory:333 - Default entity-mode: pojo
+18:47:22,244  INFO SettingsFactory:337 - Named query checking : enabled
+18:47:22,447  INFO SessionFactoryImpl:187 - building session factory
+18:47:23,160  INFO SessionFactoryObjectFactory:105 - Not binding factory to JNDI, no JNDI name configured
+18:47:23,183  INFO SchemaExport:226 - Running hbm2ddl schema export
+18:47:23,184  INFO SchemaExport:251 - exporting generated schema to database
+18:47:23,394  INFO SchemaExport:268 - schema export complete
+18:47:23,607 TRACE StringType:151 - binding 'sdf' to parameter: 1
+18:47:23,608 TRACE StringType:151 - binding 'sdf' to parameter: 2
+18:47:23,609 TRACE StringType:151 - binding 'sdfd' to parameter: 3
+18:47:23,610 TRACE IntegerType:151 - binding '1' to parameter: 4
