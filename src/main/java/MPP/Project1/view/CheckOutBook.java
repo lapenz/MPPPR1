@@ -40,7 +40,7 @@ public class CheckOutBook {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public void checkOut() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -66,7 +66,9 @@ public class CheckOutBook {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 232, 180);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLocationRelativeTo(null);
+		frame.getContentPane().setBackground(new Color(250,250,210));
 		frame.getContentPane().setLayout(null);
 		frame.getContentPane().setFocusable(true);
 		frame.toFront();
@@ -111,12 +113,19 @@ public class CheckOutBook {
 				// TODO Auto-generated method stub
 				//textFields.get(0).setText("Fucks");
 				lblNewLabel.setText("Title:");
-				if((mybook == null) || (mybook !=null && mybook.getIsbn() !=textFields.get(0).getText()))
+				if((mybook == null) || (mybook !=null && mybook.getIsbn() !=textFields.get(0).getText())) {
+					System.out.println("In");
 					mybook = Bookctr.findFirst("isbn", textFields.get(0).getText());
+					if(mybook==null)
+						mybook=null;
+				}
 				if(mybook != null ) {
 					textFields.get(0).setText(mybook.getTitle());
 				}
-				else textFields.get(0).setText("");
+				else {
+					lblNewLabel.setText("isbn:");
+					textFields.get(0).setText("");
+					}
 			}
 			@Override
 			public void focusGained(FocusEvent e) {
@@ -130,13 +139,12 @@ public class CheckOutBook {
 			}
 		});
 		
-
 		textFields.get(1).addFocusListener( new FocusListener() {
 			@Override
 			public void focusLost(FocusEvent e) {
 				// TODO Auto-generated method stub
 				//textFields.get(0).setText("Fucks");
-				lblNewLabel.setText("Name:");
+				lblNewLabel_1.setText("Name:");
 				if((myMember == null))
 					myMember = memberCtr.find(Integer.parseInt(textFields.get(1).getText()));
 				if(myMember != null ) {
@@ -152,7 +160,9 @@ public class CheckOutBook {
 				lblNewLabel_1.setText("MemberID:");
 				if(myMember !=null)
 					textFields.get(1).setText(Integer.toString(myMember.getId()));
-				else textFields.get(1).setText("");
+				else {
+					textFields.get(1).setText("");
+					}
 				
 			}
 		});
@@ -162,7 +172,7 @@ public class CheckOutBook {
 		lblNewLabel_6.setHorizontalAlignment(JLabel.CENTER);
 		lblNewLabel_6.setOpaque(true);
 		//lblNewLabel_6.setForeground(Color.white);
-		lblNewLabel_6.setBackground(new Color(238, 238, 0));
+		lblNewLabel_6.setBackground(new Color(240,230,140));
 		lblNewLabel_6.setFont(new Font("Courier New",Font.BOLD,20));
 		lblNewLabel_6.setBounds(0, 0, 216, 25);
 		frame.getContentPane().add(lblNewLabel_6);
@@ -170,18 +180,26 @@ public class CheckOutBook {
 		
 		
 		JButton btnNewButton_1 = new JButton("CheckOut");
+		btnNewButton_1.setBackground(new Color(240,230,140));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-						if(mybook != null && myMember!=null)
+						if(mybook==null)
+							JOptionPane.showMessageDialog(null,"this book does not exist");
+						else if(myMember==null)
+							JOptionPane.showMessageDialog(null,"this member does not exist");
+						else
 						{
 							lendCtr.checkout(myMember.getId(), mybook.getIsbn());
+							JOptionPane.showMessageDialog(null,"Check out saved ");
+							frame.setVisible(false);
 						}
+						
 				}
 				catch ( Exception e1)
 				{
-					
-					
+					System.out.println(e1);
+					JOptionPane.showMessageDialog(null,e1.getMessage());
 				}
 			}
 		});

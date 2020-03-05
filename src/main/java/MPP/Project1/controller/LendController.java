@@ -20,6 +20,8 @@ public class LendController extends Controller<Lend> {
 		if(member == null) throw new Exception("Member not found.");
 		
 		Book book = new Book().findFirst("isbn", isbn);
+		if(book== null)
+			throw new Exception("Book not found or not available.");
 		CopyBook copyBook = book.getOneCopy();
 		
 		if(copyBook == null) throw new Exception("Book not found or not available.");
@@ -37,7 +39,7 @@ public class LendController extends Controller<Lend> {
 		lend.setDueDate(c.getTime());
 		
 		copyBook.setAvailability(false);
-		
+		copyBook.update();
 		save(lend);
 	}
 	

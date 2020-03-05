@@ -41,6 +41,20 @@ public class Author extends Model<Author> implements Serializable {
 	private List<Book> books = new ArrayList<Book>();
 	
 	
+	
+	public Author() {
+		
+	}
+	public Author(String first_name, String last_name, String street, String city, String state, String zip,
+			String phone) {
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.street = street;
+		this.city = city;
+		this.state = state;
+		this.zip = zip;
+		this.phone = phone;
+	}
 	public String getFirst_name() {
 		return first_name;
 	}
@@ -94,6 +108,10 @@ public class Author extends Model<Author> implements Serializable {
 	}
 	public void setBio(String bio) {
 		this.bio = bio;
+	}
+	public void setOneBook(Book book) 
+	{
+		books.add(book);
 	}
 	
 	@Override

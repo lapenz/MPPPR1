@@ -72,7 +72,10 @@ public class Book extends Model<Book> implements Serializable{
 	public void setCopyBooks(List<CopyBook> copyBooks) {
 		this.copyBooks = copyBooks;
 	}
-	
+	public void setOneAuthor(Author author) {
+		author.setOneBook(this);
+		authors.add(author);
+	}
 	public void setOneCopy() {
 		copyBooks.add(new CopyBook(this));
 	}

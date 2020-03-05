@@ -30,14 +30,8 @@ public class AdminaddMember extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 	private JFrame frame;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
 	private JLabel lblNewLabel_4;
-	private JTextField textField_4;
 	private JLabel lblNewLabel_5;
-	private JTextField textField_5;
 	private JLabel lblNewLabel_6;
 	private static MemberController membCtr = new MemberController(); 
 
@@ -119,7 +113,6 @@ public class AdminaddMember extends JFrame {
 		//lblNewLabel_3.setHorizontalAlignment(JLabel.CENTER);
 		frame.getContentPane().add(lblNewLabel_3);
 		
-		textField_3 = new JTextField();
 		textFields.get(3).setBounds(102, 139, 86, 20);
 		frame.getContentPane().add(textFields.get(3));
 		textFields.get(3).setColumns(10);
@@ -139,7 +132,7 @@ public class AdminaddMember extends JFrame {
 		lblNewLabel_5.setBounds(34, 208, 46, 14);
 		frame.getContentPane().add(lblNewLabel_5);
 		
-		textField_5 = new JTextField();
+		
 		textFields.get(5).setBounds(102, 205, 86, 20);
 		frame.getContentPane().add(textFields.get(5));
 		textFields.get(5).setColumns(10);

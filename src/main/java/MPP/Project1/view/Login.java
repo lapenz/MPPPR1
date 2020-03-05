@@ -1,4 +1,5 @@
 package MPP.Project1.view;
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -52,6 +53,7 @@ public class Login {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 363, 220);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setBackground(new Color(250,250,210));
 		frame.getContentPane().setLayout(null);
 		//frame.setFocusable(true);
 		frame.getContentPane().setFocusable(true);
@@ -77,8 +79,10 @@ public class Login {
 		
 		
 		JButton btnNewButton = new JButton("Login");
+		btnNewButton.setBackground(new Color(240,230,140));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String name = textField.getText();
 				String UserType = "";
 				try {
 					if(!textField.getText().equals(""))
@@ -89,14 +93,16 @@ public class Login {
 					}
 					
 					else if (UserType.equals("1")) {
-						AdminView AdView = new AdminView();
-						AdView.adminView();
+						AdminView AdView = new AdminView(name);
+						AdView.adminView(name);
 						frame.setVisible(false);
 						
 					}
 					else if(UserType.equals("2")) {
 						//library Page
-						JOptionPane.showMessageDialog(null,"FuckLibraryn");
+						LibrarianView lib = new LibrarianView(name);
+						lib.setVisible(true);
+						frame.setVisible(false);
 					}
 					else if(UserType.equals("3")) {
 						//both
@@ -104,7 +110,7 @@ public class Login {
 				}
 				catch (Exception ex )
 				{
-					throw ex;
+					JOptionPane.showMessageDialog(null,"Incorrect UserName or Password");
 				}
 				textField.setText("");
 				passwordField.setText("");
