@@ -1,12 +1,6 @@
 package MPP.Project1;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import MPP.Project1.controller.BookController;
-import MPP.Project1.model.Author;
-import MPP.Project1.model.Book;
-import MPP.Project1.model.CopyBook;
+import MPP.Project1.model.ProjectUser;
 
 
 /**
@@ -47,7 +41,14 @@ public class App
 //       book.save();
     	
     	
-    	Book bk = new BookController().findFirst("isbn", "63636363636363666");
+//    	Book bk = new BookController().findFirst("isbn", "63636363636363666");
+    	
+    	ProjectUser us = new ProjectUser();
+    	us.setLogin("sdf");
+    	us.setPassword("sdf");
+    	us.setType("sdfd");
+    	
+    	us.save();
 //    	List<CopyBook> lst = bk.getCopyBooks();
 //    	
 //		System.out.println(bk.getAuthors());

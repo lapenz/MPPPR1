@@ -1,11 +1,11 @@
 package MPP.Project1.controller;
 
-import MPP.Project1.model.User;
+import MPP.Project1.model.ProjectUser;
 
-public class UserController extends Controller<User>{
+public class ProjectUserController extends Controller<ProjectUser>{
 
 	public String login(String login, String password) {
-		User user = new User().findFirst("login", login);
+		ProjectUser user = new ProjectUser().findFirst("login", login);
 		if(user == null)
 			return null;
 		
