@@ -44,7 +44,7 @@ public class AdminaddMember extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public void adminAddMember() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -71,10 +71,11 @@ public class AdminaddMember extends JFrame {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 267, 370);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		//frame.setBackground(Color.black);
 		frame.getContentPane().setBackground(new Color(250,250,210));
+		frame.setLocationRelativeTo(null);
 		
 		final List<JTextField> textFields = new ArrayList<JTextField>();
 		for(int i =0 ;i<7;++i) {

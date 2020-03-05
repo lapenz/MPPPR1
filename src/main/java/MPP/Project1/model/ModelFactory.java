@@ -19,6 +19,7 @@ public class ModelFactory {
 		map.put("MPP.Project1.controller.LendController", new Lend());
 		map.put("MPP.Project1.controller.BookController", new Book());
 		map.put("MPP.Project1.controller.ProjectUserController", new ProjectUser());
+		map.put("MPP.Project1.controller.CopyBookController", new CopyBook());
 	}
 	
 

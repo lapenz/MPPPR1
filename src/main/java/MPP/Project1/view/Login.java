@@ -5,7 +5,8 @@ import javax.swing.JFrame;
 import java.awt.GridLayout;
 import javax.swing.JTextField;
 
-import MPP.Project1.controller.UserController;
+import MPP.Project1.controller.ProjectUserController;
+import MPP.Project1.model.ProjectUser;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -19,7 +20,7 @@ public class Login {
 	private JFrame frame;
 	private JTextField textField;
 	private JPasswordField passwordField;
-	private static UserController userCont = new UserController();
+	private static ProjectUserController userCont = new ProjectUserController();
 
 	/**
 	 * Launch the application.
@@ -52,6 +53,9 @@ public class Login {
 		frame.setBounds(100, 100, 363, 220);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		//frame.setFocusable(true);
+		frame.getContentPane().setFocusable(true);
+		frame.setLocationRelativeTo(null);
 		
 		JLabel lblNewLabel = new JLabel("UserName:");
 		lblNewLabel.setBounds(64, 63, 70, 14);
@@ -78,23 +82,29 @@ public class Login {
 				String UserType = "";
 				try {
 					if(!textField.getText().equals(""))
-							UserType = userCont.login(textField.getText(),passwordField.getPassword().toString());
-					if (UserType.equals("1")) {
-						//adminpage
+							UserType = userCont.login(textField.getText(),passwordField.getText().toString());
+					
+					if(UserType == null) {
+						JOptionPane.showMessageDialog(null,"Incorrect UserName or Password");
+					}
+					
+					else if (UserType.equals("1")) {
+						AdminView AdView = new AdminView();
+						AdView.adminView();
+						frame.setVisible(false);
+						
 					}
 					else if(UserType.equals("2")) {
 						//library Page
+						JOptionPane.showMessageDialog(null,"FuckLibraryn");
 					}
 					else if(UserType.equals("3")) {
 						//both
 					}
-					else {
-						JOptionPane.showMessageDialog(null,"UserName or Passwrod is incorrect");
-					}
 				}
 				catch (Exception ex )
 				{
-					JOptionPane.showMessageDialog(null,"you need to input a password");
+					throw ex;
 				}
 				textField.setText("");
 				passwordField.setText("");

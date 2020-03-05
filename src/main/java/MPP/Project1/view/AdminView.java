@@ -28,7 +28,7 @@ public class AdminView extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public void adminView() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -56,6 +56,7 @@ public class AdminView extends JFrame {
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.setLocationRelativeTo(null);
 		//bookview = new AdminAddBook();
 		//memberview = new AdminaddMember();
 		
@@ -79,15 +80,16 @@ public class AdminView extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				//AdminaddMember memberview = new AdminaddMember();
-				//memberview.addMember();
+				AdminaddMember memberview = new AdminaddMember();
+				memberview.adminAddMember();
 			}
 		});
 		mntmNewMenuItem_1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				
+				AdminAddBook addbookview = new AdminAddBook();
+				addbookview.adminAddBook();
 			}
 		});
 		

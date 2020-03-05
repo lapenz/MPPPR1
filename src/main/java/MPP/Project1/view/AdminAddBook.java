@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import MPP.Project1.controller.BookController;
+import MPP.Project1.controller.CopyBookController;
 import MPP.Project1.model.Book;
 import MPP.Project1.model.CopyBook;
 
@@ -33,13 +34,15 @@ public class AdminAddBook extends JFrame{
 	//private JTextField textField_5;
 	private JLabel lblNewLabel_6;
 	private JLabel lblNewLabel_1;
+	private JLabel lblNewLabel_2;
 	private static BookController Bookctr = new BookController();
+	private static CopyBookController copyBook = new CopyBookController();
 	private Book myBook;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public void adminAddBook() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -65,8 +68,9 @@ public class AdminAddBook extends JFrame{
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 232, 227);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.setLocationRelativeTo(null);
 		final List<JTextField> textFields = new ArrayList<JTextField>();
 		Bookctr = new BookController();
 		
@@ -100,7 +104,7 @@ public class AdminAddBook extends JFrame{
 		frame.getContentPane().add(textFields.get(1));
 		textFields.get(1).setColumns(10);
 		
-		JLabel lblNewLabel_2 = new JLabel("NumberOfCopyes:");
+		lblNewLabel_2 = new JLabel("NumberOfCopyes:");
 		lblNewLabel_2.setBounds(10, 111, 114, 14);
 		//lblNewLabel_2.setHorizontalAlignment(JLabel.);
 		frame.getContentPane().add(lblNewLabel_2);
@@ -126,11 +130,14 @@ public class AdminAddBook extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				System.out.println(myBook.getIsbn());
 				if (myBook != null) {
-					List<CopyBook> copyBooks = new ArrayList<>();
+					/*List<CopyBook> copyBooks = new ArrayList<>();
 					copyBooks.addAll(myBook.getCopyBooks());
 					copyBooks.add(new CopyBook());
 					myBook.setCopyBooks(copyBooks);
-					Bookctr.save(myBook);
+					Bookctr.update(myBook);*/
+					myBook.setOneCopy();
+					Bookctr.update(myBook);
+					textFields.get(2).setText(Integer.toString(myBook.getCopyBooks().size()));
 				}
 			}
 		});

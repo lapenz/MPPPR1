@@ -58,7 +58,7 @@ public class App
 //		System.out.println(lst.get(0));
     	
 //		System.out.println(books.toString());*/
-    	User u = new User();
+    	ProjectUser u = new ProjectUser();
     	u.setLogin("Karim");
     	u.setPassword("123");
     	u.setType("1");

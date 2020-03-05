@@ -37,7 +37,6 @@ public class LendController extends Controller<Lend> {
 		lend.setDueDate(c.getTime());
 		
 		copyBook.setAvailability(false);
-		copyBook.save();
 		
 		save(lend);
 	}

@@ -33,7 +33,7 @@ public abstract class Controller<T> implements IController<T> {
 	
 	@Override
 	public List<String> update(IModel<T> obj) {
-		List<String> errors = obj.validate();
+		List<String> errors= new ArrayList<String>();
 		if(errors.isEmpty()) {
 			obj.update();
 			return null;

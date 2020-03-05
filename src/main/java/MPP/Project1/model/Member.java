@@ -89,6 +89,13 @@ public class Member extends Model<Member> implements Serializable{
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	@Override
 	public List<String> validate() {
 		// TODO Auto-generated method stub

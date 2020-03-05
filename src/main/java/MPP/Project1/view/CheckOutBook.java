@@ -17,6 +17,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import MPP.Project1.controller.BookController;
+import MPP.Project1.controller.LendController;
 import MPP.Project1.controller.MemberController;
 import MPP.Project1.model.Book;
 import MPP.Project1.model.CopyBook;
@@ -30,6 +31,7 @@ public class CheckOutBook {
 	private JLabel  lblNewLabel;
 	private static BookController Bookctr = new BookController();
 	private static MemberController memberCtr = new MemberController();
+	private static LendController lendCtr = new LendController();
 	private String isbn;
 	private String Title;
 	private Book mybook;
@@ -66,6 +68,9 @@ public class CheckOutBook {
 		frame.setBounds(100, 100, 232, 180);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.getContentPane().setFocusable(true);
+		frame.toFront();
+		frame.requestFocus();
 		final List<JTextField> textFields = new ArrayList<JTextField>();
 		//Bookctr = new BookController();
 		
@@ -144,9 +149,9 @@ public class CheckOutBook {
 			public void focusGained(FocusEvent e) {
 				// TODO Auto-generated method stub
 				//isbn = lblNewLabel.getText();
-				lblNewLabel.setText("MemberID:");
+				lblNewLabel_1.setText("MemberID:");
 				if(myMember !=null)
-					textFields.get(1).setText("5");
+					textFields.get(1).setText(Integer.toString(myMember.getId()));
 				else textFields.get(1).setText("");
 				
 			}
@@ -168,16 +173,19 @@ public class CheckOutBook {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-						
+						if(mybook != null && myMember!=null)
+						{
+							lendCtr.checkout(myMember.getId(), mybook.getIsbn());
+						}
 				}
 				catch ( Exception e1)
 				{
 					
-					JOptionPane.showMessageDialog (null,"isbn Not Found");
+					
 				}
 			}
 		});
-		btnNewButton_1.setBounds(115, 108, 86, 23);
+		btnNewButton_1.setBounds(107, 108, 94, 23);
 		frame.getContentPane().add(btnNewButton_1);
 	}
 

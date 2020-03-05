@@ -19,11 +19,12 @@ public class CopyBook extends Model<CopyBook> {
     private Book book;
 	
 	public CopyBook() {
-		
+		availability =true;
 	}
 	
-	public CopyBook(Book book) {
+	public CopyBook( Book book) {
 		this.book = book;
+		availability =true;
 	}
 
 	public int getNumber() {
@@ -56,10 +57,7 @@ public class CopyBook extends Model<CopyBook> {
 		return null;
 	}
 
-	@Override
-	public String toString() {
-		return "CopyBook [id=" + id + ", number=" + number + ", availability=" + availability + ", book=" + book + "]";
-	}
+	
 	
 	
 }

@@ -73,6 +73,9 @@ public class Book extends Model<Book> implements Serializable{
 		this.copyBooks = copyBooks;
 	}
 	
+	public void setOneCopy() {
+		copyBooks.add(new CopyBook(this));
+	}
 	
 	public CopyBook getOneCopy() {
 		for (CopyBook copyBook : getCopyBooks()) {

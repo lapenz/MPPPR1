@@ -4,13 +4,24 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
 public class Lend extends Model<Lend> {
+	@ManyToOne
 	private Member member;
+	@ManyToOne
 	private CopyBook book;
 	private Date lendDate;
 	private Date dueDate;
 	private Date returnDate;
 	private BigDecimal fine;
+	
+	@Id @GeneratedValue
+	private int id;
 	public Member getMember() {
 		return member;
 	}
