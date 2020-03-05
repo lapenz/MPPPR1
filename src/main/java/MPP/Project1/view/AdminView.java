@@ -12,12 +12,18 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
+import javax.swing.text.View;
 import javax.swing.text.html.HTMLDocument.HTMLReader.BlockAction;
+
+import junit.framework.Test;
+
 import javax.swing.JLabel;
 
-public class AdminView {
+public class AdminView extends JFrame {
 
 	private JFrame frame;
+	private AdminaddMember memberview;
+	private AdminAddBook bookview;
 
 	/**
 	 * Launch the application.
@@ -50,6 +56,8 @@ public class AdminView {
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		//bookview = new AdminAddBook();
+		//memberview = new AdminaddMember();
 		
 		JLabel lblNewLabel = new JLabel("Welcome");
 		lblNewLabel.setBounds(118, 72, 219, 89);
@@ -59,7 +67,7 @@ public class AdminView {
 		JMenuBar menuBar = new JMenuBar();
 		frame.setJMenuBar(menuBar);
 		
-		JMenu mnNewMenu = new JMenu("Admin");
+		JMenu mnNewMenu = new JMenu("Admin Function");
 		menuBar.add(mnNewMenu);
 		
 		JMenuItem mntmNewMenuItem = new JMenuItem("Add new Library member");
@@ -71,7 +79,8 @@ public class AdminView {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				JOptionPane.showMessageDialog(null,"Works");
+				//AdminaddMember memberview = new AdminaddMember();
+				//memberview.addMember();
 			}
 		});
 		mntmNewMenuItem_1.addActionListener(new ActionListener() {

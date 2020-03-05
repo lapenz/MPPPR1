@@ -1,5 +1,6 @@
 package MPP.Project1.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import MPP.Project1.model.IModel;
@@ -19,7 +20,8 @@ public abstract class Controller<T> implements IController<T> {
 	
 	@Override
 	public List<String> save(IModel<T> obj) {
-		List<String> errors = obj.validate();
+		List<String> errors= new ArrayList<String>();
+		//errors.addAll(obj.validate());
 		if(errors.isEmpty()) {
 			obj.save();
 			return null;

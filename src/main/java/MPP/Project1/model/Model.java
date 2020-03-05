@@ -58,7 +58,7 @@ public abstract class Model<T> implements IModel<T> {
 	public T findFirst(String column, String value)  {
 		Session session = HibernateUtil.getSession();
 	    
-		Query q = session.createQuery("FROM "+ this.getClass().getName() + " where " + column + " = " + value);
+		Query q = session.createQuery("FROM "+ this.getClass().getName() + " where " + column + " = '" + value+"'");
         
         T obj = (T) q.uniqueResult();
         

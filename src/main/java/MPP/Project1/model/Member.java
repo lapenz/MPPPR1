@@ -34,6 +34,19 @@ public class Member extends Model<Member> implements Serializable{
 	private String phone;
 	
 
+	public Member(String first_name, String last_name, String street, String city, String state, String zip,
+			String phone) {
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.street = street;
+		this.city = city;
+		this.state = state;
+		this.zip = zip;
+		this.phone = phone;
+	}
+	public Member() {
+		
+	}
 	public String getFirst_name() {
 		return first_name;
 	}
@@ -80,10 +93,10 @@ public class Member extends Model<Member> implements Serializable{
 	public List<String> validate() {
 		// TODO Auto-generated method stub
 		List<String> errorMessagesList = new ArrayList<String>();
-		if(this.first_name.isBlank()) {
+		if(this.first_name.isEmpty()) {
 			errorMessagesList.add("First name can't be blank");
 		}
-		if(this.last_name.isBlank()) {
+		if(this.last_name.isEmpty()) {
 			errorMessagesList.add("Last name can't be blank");
 		}
 		

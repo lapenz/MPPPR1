@@ -21,7 +21,8 @@ public class Author extends Model<Author> implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 
-	@Id @GeneratedValue
+	@Id 
+	@GeneratedValue
     private int id;
 	private String first_name;
 	private String last_name;

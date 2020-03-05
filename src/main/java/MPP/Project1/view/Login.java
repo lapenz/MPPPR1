@@ -4,7 +4,11 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import java.awt.GridLayout;
 import javax.swing.JTextField;
+
+import MPP.Project1.controller.UserController;
+
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -15,6 +19,7 @@ public class Login {
 	private JFrame frame;
 	private JTextField textField;
 	private JPasswordField passwordField;
+	private static UserController userCont = new UserController();
 
 	/**
 	 * Launch the application.
@@ -70,8 +75,32 @@ public class Login {
 		JButton btnNewButton = new JButton("Login");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				String UserType = "";
+				try {
+					if(!textField.getText().equals(""))
+							UserType = userCont.login(textField.getText(),passwordField.getPassword().toString());
+					if (UserType.equals("1")) {
+						//adminpage
+					}
+					else if(UserType.equals("2")) {
+						//library Page
+					}
+					else if(UserType.equals("3")) {
+						//both
+					}
+					else {
+						JOptionPane.showMessageDialog(null,"UserName or Passwrod is incorrect");
+					}
+				}
+				catch (Exception ex )
+				{
+					JOptionPane.showMessageDialog(null,"you need to input a password");
+				}
+				textField.setText("");
+				passwordField.setText("");
 				
 			}
+			
 		});
 		btnNewButton.setBounds(144, 116, 121, 23);
 		frame.getContentPane().add(btnNewButton);
