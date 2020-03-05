@@ -49,7 +49,7 @@ public class App
        //book.save();
     	//System.out.println(book.findFirst("isbn", "50"));
     	
-    	Book bk = new BookController().findFirst("isbn", "63636363636363666");
+    	//Book bk = new BookController().findFirst("isbn", "63636363636363666");
 //    	List<CopyBook> lst = bk.getCopyBooks();
 //    	
 //		System.out.println(bk.getAuthors());
@@ -58,11 +58,11 @@ public class App
 //		System.out.println(lst.get(0));
     	
 //		System.out.println(books.toString());*/
-    	/*User u = new User();
+    	User u = new User();
     	u.setLogin("Karim");
     	u.setPassword("123");
     	u.setType("1");
-    	u.save();*/
+    	u.save();
 	
     }
     

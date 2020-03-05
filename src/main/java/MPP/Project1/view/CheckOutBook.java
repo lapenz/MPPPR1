@@ -17,8 +17,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 import MPP.Project1.controller.BookController;
+import MPP.Project1.controller.MemberController;
 import MPP.Project1.model.Book;
 import MPP.Project1.model.CopyBook;
+import MPP.Project1.model.Member;
 
 public class CheckOutBook {
 
@@ -27,9 +29,11 @@ public class CheckOutBook {
 	private JLabel lblNewLabel_1;
 	private JLabel  lblNewLabel;
 	private static BookController Bookctr = new BookController();
+	private static MemberController memberCtr = new MemberController();
 	private String isbn;
 	private String Title;
 	private Book mybook;
+	private Member myMember;
 
 	/**
 	 * Launch the application.
@@ -108,7 +112,6 @@ public class CheckOutBook {
 					textFields.get(0).setText(mybook.getTitle());
 				}
 				else textFields.get(0).setText("");
-
 			}
 			@Override
 			public void focusGained(FocusEvent e) {
@@ -121,6 +124,34 @@ public class CheckOutBook {
 				
 			}
 		});
+		
+
+		textFields.get(1).addFocusListener( new FocusListener() {
+			@Override
+			public void focusLost(FocusEvent e) {
+				// TODO Auto-generated method stub
+				//textFields.get(0).setText("Fucks");
+				lblNewLabel.setText("Name:");
+				if((myMember == null))
+					myMember = memberCtr.find(Integer.parseInt(textFields.get(1).getText()));
+				if(myMember != null ) {
+					textFields.get(1).setText(myMember.getLast_name() +", " +myMember.getFirst_name());
+				}
+				else textFields.get(1).setText("");
+				
+			}
+			@Override
+			public void focusGained(FocusEvent e) {
+				// TODO Auto-generated method stub
+				//isbn = lblNewLabel.getText();
+				lblNewLabel.setText("MemberID:");
+				if(myMember !=null)
+					textFields.get(1).setText("5");
+				else textFields.get(1).setText("");
+				
+			}
+		});
+		
 		
 		lblNewLabel_6 = new JLabel("Check Out");
 		lblNewLabel_6.setHorizontalAlignment(JLabel.CENTER);

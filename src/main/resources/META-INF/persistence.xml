@@ -10,7 +10,7 @@
            <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
            <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/mppproject1</property>
            <property name="hibernate.connection.username">postgres</property>
-           <property name="hibernate.connection.password">postgres</property>
+           <property name="hibernate.connection.password">123</property>
 
 	    	<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/> <!-- DB Dialect -->
             <property name="hibernate.hbm2ddl.auto" value="update" /> <!-- create / create-drop / update -->
