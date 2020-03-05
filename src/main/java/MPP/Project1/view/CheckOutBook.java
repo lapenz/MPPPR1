@@ -16,10 +16,9 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
-import MPP.Project1.controller.BookController;
+import MPP.Project1.controller.CopyBookController;
 import MPP.Project1.controller.LendController;
 import MPP.Project1.controller.MemberController;
-import MPP.Project1.model.Book;
 import MPP.Project1.model.CopyBook;
 import MPP.Project1.model.Member;
 
@@ -29,12 +28,12 @@ public class CheckOutBook {
 	private JLabel lblNewLabel_6;
 	private JLabel lblNewLabel_1;
 	private JLabel  lblNewLabel;
-	private static BookController Bookctr = new BookController();
+	private static CopyBookController copyBookctr = new CopyBookController();
 	private static MemberController memberCtr = new MemberController();
 	private static LendController lendCtr = new LendController();
 	private String isbn;
 	private String Title;
-	private Book mybook;
+	private CopyBook copybook;
 	private Member myMember;
 
 	/**
@@ -86,7 +85,7 @@ public class CheckOutBook {
 			//textFields.get(i).setForeground(Color.white);
 		}
 		
-		lblNewLabel = new JLabel("Isbn:");
+		lblNewLabel = new JLabel("Copy ID:");
 		lblNewLabel.setBounds(34, 41, 68, 14);
 		//lblNewLabel.setHorizontalAlignment(JLabel.CENTER);
 		frame.getContentPane().add(lblNewLabel);
@@ -113,17 +112,16 @@ public class CheckOutBook {
 				// TODO Auto-generated method stub
 				//textFields.get(0).setText("Fucks");
 				lblNewLabel.setText("Title:");
-				if((mybook == null) || (mybook !=null && mybook.getIsbn() !=textFields.get(0).getText())) {
-					System.out.println("In");
-					mybook = Bookctr.findFirst("isbn", textFields.get(0).getText());
-					if(mybook==null)
-						mybook=null;
+				if((copybook == null) || (copybook.getId() != Integer.parseInt(textFields.get(0).getText()))) {
+					copybook = copyBookctr.find(Integer.parseInt(textFields.get(0).getText()));
+					if(copybook==null)
+						copybook=null;
 				}
-				if(mybook != null ) {
-					textFields.get(0).setText(mybook.getTitle());
+				if(copybook != null ) {
+					textFields.get(0).setText(copybook.getBook().getTitle());
 				}
 				else {
-					lblNewLabel.setText("isbn:");
+					lblNewLabel.setText("CopyBook ID:");
 					textFields.get(0).setText("");
 					}
 			}
@@ -131,9 +129,9 @@ public class CheckOutBook {
 			public void focusGained(FocusEvent e) {
 				// TODO Auto-generated method stub
 				//isbn = lblNewLabel.getText();
-				lblNewLabel.setText("isbn:");
-				if(mybook !=null)
-					textFields.get(0).setText(mybook.getIsbn());
+				lblNewLabel.setText("CopyBook ID:");
+				if(copybook !=null)
+					textFields.get(0).setText(String.valueOf(copybook.getId()));
 				else textFields.get(0).setText("");
 				
 			}
@@ -184,13 +182,13 @@ public class CheckOutBook {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-						if(mybook==null)
+						if(copybook==null)
 							JOptionPane.showMessageDialog(null,"this book does not exist");
 						else if(myMember==null)
 							JOptionPane.showMessageDialog(null,"this member does not exist");
 						else
 						{
-							lendCtr.checkout(myMember.getId(), mybook.getIsbn());
+							lendCtr.checkout(myMember.getId(), copybook.getId());
 							JOptionPane.showMessageDialog(null,"Check out saved ");
 							frame.setVisible(false);
 						}

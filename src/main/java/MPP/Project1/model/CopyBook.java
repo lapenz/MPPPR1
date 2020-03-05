@@ -51,6 +51,14 @@ public class CopyBook extends Model<CopyBook> {
 		this.book = book;
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	@Override
 	public List<String> validate() {
 		// TODO Auto-generated method stub

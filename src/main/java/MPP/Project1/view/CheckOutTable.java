@@ -6,9 +6,8 @@ import java.util.List;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTable;
 import javax.swing.JScrollPane;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 import MPP.Project1.model.Lend;
@@ -48,10 +47,10 @@ public class CheckOutTable {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 650, 300);
 		//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		Object []Cdfheaders1= {"MemberName","Book Title", "LendDate", "DueDate"};
+		Object []Cdfheaders1= {"MemberName","Book ID", "Book Title", "LendDate", "DueDate"};
 		
 		JLabel lblNewLabel = new JLabel("Check out Record");
 		lblNewLabel.setBounds(10, 11, 125, 14);
@@ -59,18 +58,19 @@ public class CheckOutTable {
 		
 		JScrollPane scrollPane = new JScrollPane();
 		frame.getContentPane().add(scrollPane);
-		scrollPane.setBounds(10, 31, 414, 220);
+		scrollPane.setBounds(10, 31, 600, 210);
 		
 		table = new JTable();
 		DefaultTableModel model = (DefaultTableModel) table.getModel();
 		model.setColumnIdentifiers(Cdfheaders1);
-		Object rowdata[] = new Object[4];
+		Object rowdata[] = new Object[5];
 		if(lend != null) {
 			for(int i = 0 ; i <lend.size() ;++i) {
 				rowdata[0]=lend.get(i).getMember().getFirst_name();
-				rowdata[1]=lend.get(i).getBook().getBook().getTitle();
-				rowdata[2]=lend.get(i).getLendDate() ;
-				rowdata[3]=lend.get(i).getDueDate();
+				rowdata[1]=lend.get(i).getBook().getId();
+				rowdata[2]=lend.get(i).getBook().getBook().getTitle();
+				rowdata[3]=lend.get(i).getLendDate() ;
+				rowdata[4]=lend.get(i).getDueDate();
 				model.addRow(rowdata);
 			}
 			table.setModel(model);

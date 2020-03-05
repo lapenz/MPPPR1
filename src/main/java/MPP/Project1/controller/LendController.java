@@ -15,20 +15,20 @@ public class LendController extends Controller<Lend> {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void checkout(int memberId, String isbn) throws Exception {
+	public void checkout(int memberId, int copyid) throws Exception {
 		Member member = new Member().find(memberId);
 		if(member == null) throw new Exception("Member not found.");
 		
-		Book book = new Book().findFirst("isbn", isbn);
-		if(book== null)
-			throw new Exception("Book not found or not available.");
-		CopyBook copyBook = book.getOneCopy();
-		
-		if(copyBook == null) throw new Exception("Book not found or not available.");
+		CopyBook copybook = new CopyBook().find(copyid);
+		if(copybook== null)
+			throw new Exception("Book not found.");
+		if(!copybook.isAvailability())
+			throw new Exception("Book not available.");
 
 		
+		
 		Lend lend = (Lend) create();
-		lend.setBook(copyBook);
+		lend.setBook(copybook);
 		lend.setMember(member);
 		lend.setLendDate(new Date());
 		
@@ -38,8 +38,8 @@ public class LendController extends Controller<Lend> {
         
 		lend.setDueDate(c.getTime());
 		
-		copyBook.setAvailability(false);
-		copyBook.update();
+		copybook.setAvailability(false);
+		copybook.update();
 		save(lend);
 	}
 	
