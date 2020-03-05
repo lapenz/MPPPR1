@@ -3,6 +3,7 @@ package MPP.Project1;
 import java.util.ArrayList;
 import java.util.List;
 
+import MPP.Project1.controller.BookController;
 import MPP.Project1.model.Author;
 import MPP.Project1.model.Book;
 import MPP.Project1.model.CopyBook;
@@ -48,12 +49,13 @@ public class App
        //book.save();
     	//System.out.println(book.findFirst("isbn", "50"));
     	
-    	/*Book bk = new BookController().find(47);
-    	List<CopyBook> lst = bk.getCopyBooks();
+    	Book bk = new BookController().findFirst("isbn", "63636363636363666");
+//    	List<CopyBook> lst = bk.getCopyBooks();
+//    	
+//		System.out.println(bk.getAuthors());
     	
-		System.out.println(bk.getAuthors());
-
-		System.out.println(lst.get(0));
+//
+//		System.out.println(lst.get(0));
     	
 //		System.out.println(books.toString());*/
     	/*User u = new User();

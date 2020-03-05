@@ -74,10 +74,6 @@ public class Book extends Model<Book> implements Serializable{
 	}
 	
 	
-	public Book findByIsbn(String isbn) {
-		return null;
-	}
-	
 	public CopyBook getOneCopy() {
 		for (CopyBook copyBook : getCopyBooks()) {
 			if(copyBook.isAvailability())

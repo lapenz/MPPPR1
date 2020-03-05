@@ -19,7 +19,7 @@ public class LendController extends Controller<Lend> {
 		Member member = new Member().find(memberId);
 		if(member == null) throw new Exception("Member not found.");
 		
-		Book book = new Book().findByIsbn(isbn);
+		Book book = new Book().findFirst("isbn", isbn);
 		CopyBook copyBook = book.getOneCopy();
 		
 		if(copyBook == null) throw new Exception("Book not found or not available.");
